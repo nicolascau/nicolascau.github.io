@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Comment se mettre à GitHub Pages et Jekyll ? | Le blog de Nicolas, tout simplement.</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Comment se mettre à GitHub Pages et Jekyll ?" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Comment se mettre à GitHub Pages et Jekyll ? Résumé Si comme moi, vous avez envie de monter votre blog sans vous compliquer la vie, ce mini-tutoriel est pour vous. Il vous présentera en quelques actions comment mettre en place un blog en s’appuyant sur du déjà tout prêt. A savoir : GitHub pour l’hébergement des sources GitHub Pages pour l’accessibilité du site Web Jekyll pour la mise en place d’un blog structuré en quelques clics" />
+<meta property="og:description" content="Comment se mettre à GitHub Pages et Jekyll ? Résumé Si comme moi, vous avez envie de monter votre blog sans vous compliquer la vie, ce mini-tutoriel est pour vous. Il vous présentera en quelques actions comment mettre en place un blog en s’appuyant sur du déjà tout prêt. A savoir : GitHub pour l’hébergement des sources GitHub Pages pour l’accessibilité du site Web Jekyll pour la mise en place d’un blog structuré en quelques clics" />
+<link rel="canonical" href="/jekyll/update/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll.html" />
+<meta property="og:url" content="/jekyll/update/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll.html" />
+<meta property="og:site_name" content="Le blog de Nicolas, tout simplement." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-01-17T14:00:00+01:00" />
+<script type="application/ld+json">
+{"url":"/jekyll/update/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll.html","description":"Comment se mettre à GitHub Pages et Jekyll ? Résumé Si comme moi, vous avez envie de monter votre blog sans vous compliquer la vie, ce mini-tutoriel est pour vous. Il vous présentera en quelques actions comment mettre en place un blog en s’appuyant sur du déjà tout prêt. A savoir : GitHub pour l’hébergement des sources GitHub Pages pour l’accessibilité du site Web Jekyll pour la mise en place d’un blog structuré en quelques clics","headline":"Comment se mettre à GitHub Pages et Jekyll ?","dateModified":"2019-01-17T14:00:00+01:00","datePublished":"2019-01-17T14:00:00+01:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/jekyll/update/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Le blog de Nicolas, tout simplement." /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Le blog de Nicolas, tout simplement.</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">A propos</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Comment se mettre à GitHub Pages et Jekyll ?</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-01-17T14:00:00+01:00" itemprop="datePublished">Jan 17, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="comment-se-mettre-à-github-pages-et-jekyll-">Comment se mettre à GitHub Pages et Jekyll ?</h1>
+<h2 id="résumé">Résumé</h2>
+<p>Si comme moi, vous avez envie de monter votre blog sans vous compliquer la vie, ce mini-tutoriel est pour vous. Il vous présentera en quelques actions comment mettre en place un blog en s’appuyant sur du déjà tout prêt. A savoir :</p>
+<ul>
+  <li>GitHub pour l’hébergement des sources</li>
+  <li>GitHub Pages pour l’accessibilité du site Web</li>
+  <li>Jekyll pour la mise en place d’un blog structuré en quelques clics</li>
+</ul>
+
+<p>A vos claviers !</p>
+
+<h2 id="introduction">Introduction</h2>
+<p>Depuis quelques semaines, j’ai eu envie de me mettre en place un blog. Non pas que j’ai envie de vous raconter ma vie. Néanmoins, je me dis que c’est une façon de capitaliser mes connaissances d’informaticien. Je serais donc mon premier lecteur (c’est déjà ça 😉) !</p>
+
+<p>Mon besoin est donc simple :</p>
+<ul>
+  <li>Disposer d’un site Web sans me soucier de la façon de l’héberger</li>
+  <li>Disposer d’un blog structuré et très facile à configurer/modifier/adapter
+Et si vous me suivez, vous arriverez à ceci :</li>
+</ul>
+
+<p><img src="/assets/2019-01-17-comment-se-mettre-a-github-pages-et-jekyll/01.png" alt="Mon blog Jekyll" /></p>
+
+<p>Superbe, n’est-ce pas ?</p>
+
+<h2 id="prérequis">Prérequis</h2>
+<p>Pour commencer tout cela, je me suis déjà créé un compte GitHub. Sans compte GitHub, vous n’irez pas plus loin. Pour créer votre compte, dirigez-vous sur <a href="https://github.com/">Github</a>.
+Ensuite, j’ai aussi besoin que vous ayez quelques connaissances :</p>
+<ul>
+  <li>Sur Git</li>
+  <li>Sur GitHub (mais bon si vous y avez déjà un compte, c’est surement le cas)</li>
+  <li>Sur le format Markdown (mais vraiment un tout petit peu)</li>
+</ul>
+
+<p>Je base aussi mes explications sur un environnement Windows.</p>
+
+<p> </p>
+<h2 id="1ère-étape--github-pages-pour-héberger">1ère étape : GitHub Pages pour héberger</h2>
+<p><a href="https://pages.github.com/">GitHub Pages</a> est un service d’hébergement de site statique. Il présente l’avantage d’être directement connecté à votre repository GitHub. Grâce à ce système, vous pouvez créer des sites Web.</p>
+
+<p>Deux points sont à conserver en tête lors de sa mise en place :</p>
+<ul>
+  <li>GitHub Pages est limité (pas de langages côté serveur, des limites de taille de repo., des limites de bande passante, etc.) N’espérez donc pas héberger votre site en production sur ce repository.</li>
+  <li>Un site GitHub Pages est visible en public sur le net. N’allez donc pas y intégrer des données sensibles.</li>
+</ul>
+
+<p>Vous trouverez plus d’information sur les limitations et le fonctionnement des Github Pages sur <a href="https://help.github.com/articles/what-is-github-pages/">la documentation officielle</a>.</p>
+
+<p>Pour mettre en place un hébergement de type GitHub Pages, procédez aux actions suivantes :</p>
+<ol>
+  <li>Créez un repository GitHub intitulé de la forme <code class="highlighter-rouge">username.github.io</code> (où <code class="highlighter-rouge">username</code> correspond à votre login GitHub
+    <blockquote>
+      <p>Warning : Attention, si vous ne respectez pas précisément cette syntaxe, cela ne fonctionnera pas.</p>
+    </blockquote>
+  </li>
+  <li>Téléchargez et installez <a href="https://desktop.github.com/">GitHub Desktop</a> (mais vous pouvez très bien le faire en ligne de commande)</li>
+  <li>Clonez votre repository via le menu <code class="highlighter-rouge">File &gt; Clone Repository</code> en y précisant cette adresse : https://github.com/username/username.github.io</li>
+  <li>Sauvez votre projet</li>
+</ol>
+
+<p>Ça y est vous disposez d’un espace de stockage pour votre blog.
+Pour le tester, rien de plus simple :</p>
+
+<ol>
+  <li>Créez avec un éditeur (dans mon cas <a href="https://code.visualstudio.com/">Visual Studio Code</a>) un fichier <code class="highlighter-rouge">index.html</code>
+    <blockquote>
+      <p>Warning : Par défaut, sous Windows, votre repository sera situé ici : C:\Users\username\Documents\GitHub\username.github.io
+Vous pouvez donc enregistrer ce fichier sous ce chemin.</p>
+    </blockquote>
+  </li>
+  <li>Inscrire dans le fichier le contenu suivant :
+    <pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Mon titre&lt;/h1&gt;
+        &lt;p&gt;Mon blog sera là.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+  </li>
+  <li>Le fichier apparaît alors sous GitHub Desktop dans la partie <code class="highlighter-rouge">changed files</code>. Vous pouvez entrer un commentaire de commit et cliquer sur <code class="highlighter-rouge">Commit to master</code> puis <code class="highlighter-rouge">Fetch origin</code>.
+    <blockquote>
+      <p>Warning : Il va falloir que vous patientiez quelques dizaines de secondes pour voir apparaître votre travail sur Internet.</p>
+    </blockquote>
+  </li>
+  <li>Ouvrez un navigateur Web et entrez l’adresse suivante : https://username.github.io.</li>
+</ol>
+
+<p>Ça y est, vous avez votre site disponible sur Internet ! Vous pouvez retrouver l’ensemble de ces étapes détaillez <a href="https://pages.github.com/">ici</a>.
+Passons maintenant à l’étape suivante : intégrer un site avec Jekyll.
+ </p>
+<h2 id="2ème-étape--bloguer-avec-jekyll">2ème étape : Bloguer avec Jekyll</h2>
+<p><a href="https://jekyllrb.com/">Jekyll</a> est une façon de créer votre site statique sous le format que j’appellerais « blog ». Grâce à ce système, vous pouvez écrire ainsi vos billets au format Markdown et les intégrer rapidement.</p>
+
+<p>Pourquoi utiliser Jekyll plutôt qu’autre chose ? J’utilise Jekyll pour plusieurs raisons :</p>
+<ul>
+  <li>La raison essentielle est que GitHub le met en avant. La compatibilité Jekyll est donc assurée au sein d’un hébergement de type GitHub Pages.</li>
+  <li>Format d’article Markdown : un langage de balisage permettant la réutilisation des articles sous</li>
+  <li>Simplicité de mise en place et de mise à jour</li>
+</ul>
+
+<p>Vous trouverez plus d’information sur <a href="https://jekyllrb.com/docs/">la documentation officielle</a>.</p>
+
+<p>Pour le mettre en place, suivez les actions suivantes :</p>
+<ol>
+  <li>Installer un environnement de développement Ruby
+    <blockquote>
+      <p>Pas de panique, pour l’installer, il vous suffit de suivre ce qui est précisé dans <a href="https://jekyllrb.com/docs/installation/windows/">ce guide d’installation sous Windows</a>.</p>
+    </blockquote>
+  </li>
+</ol>
+
+<ul>
+  <li>Téléchargez <code class="highlighter-rouge">Ruby+Devkit</code> et suivez l’installation pas à pas</li>
+</ul>
+
+<blockquote>
+  <p>Warning : Dans mon cas, je me base sur l’installeur <code class="highlighter-rouge">Ruby+Devkit 2.5.3.1 (x64)</code> qui est la version recommandée du moment.</p>
+</blockquote>
+
+<ul>
+  <li>Après installation, une invite de commande va se lancer, sélectionnez le mode d’installation numéro 1. Celui-ci vous permettra ensuite d’utiliser la commande <code class="highlighter-rouge">gem</code>.</li>
+</ul>
+
+<ol>
+  <li>A la fin de l’installation, sélectionnez <code class="highlighter-rouge">Start Command Prompt with Ruby</code> dans le menu des applications Windows. Une invite de commande se lance.</li>
+  <li>Procédez à l’installation de Jekyll avec la ligne de commande <code class="highlighter-rouge">gem install jekyll bundler</code></li>
+  <li>A la fin de l’installation, vérifez sa bonne installation avec la ligne de commande <code class="highlighter-rouge">jekyll -v</code></li>
+</ol>
+
+<p>Jekyll est maintenant installé sur votre poste, il ne vous reste plus qu’à l’utiliser.</p>
+
+<p>Passons maintenant à l’étape suivante : réaliser son premier site avec Jekyll.
+ </p>
+<h2 id="3ème-étape--réaliser-son-premier-site-avec-jekyll">3ème étape : Réaliser son premier site avec Jekyll</h2>
+<p>Maintenant que Jekyll est installé, nous allons créer notre premier site en quelques commandes. Je ne vais donc pas être exhaustif et parcourir volontairement les grandes lignes. Le reste pourra être étudié plus en profondeur au sein de <a href="https://jekyllrb.com/docs/">la documentation officielle</a>.</p>
+
+<p>J’ai décidé volontairement de ne pas créer le site directement au sein de la copie locale de mon repository GitHub. Je réalise donc ensuite des copies locales lorsque j’obtiens une version que je juge satisfaisante de mon site.
+Je vais donc vous décrire ce mode opératoire :</p>
+<ol>
+  <li>Ouvrez une invite de commande et se placer dans le répertoire racine où vous souhaitez y déposer votre site localement :
+cd C:\Developpement</li>
+  <li>Créez un nouveau site Jekyll préconfiguré <code class="highlighter-rouge">jekyll new monsite</code></li>
+</ol>
+
+<blockquote>
+  <p>Warning : Vous disposez désormais d’un répertoire <code class="highlighter-rouge">monsite</code> au sein de votre répertoire racine. Celui-ci contient votre site statique.</p>
+</blockquote>
+
+<ol>
+  <li>Déplacez vous dans le répertoire de votre nouveau site <code class="highlighter-rouge">cd monsite</code></li>
+  <li>Construisez le site et déployez le localement <code class="highlighter-rouge">bundle exec jekyll serve</code></li>
+  <li>Ouvrez un navigateur Web et entrez l’adresse suivante : https://localhost:4000/</li>
+</ol>
+
+<blockquote>
+  <p>Warning : Vous avez votre site Jekyll en local. Vous pouvez retrouver l’ensemble de ces étapes détaillez <a href="https://jekyllrb.com/docs/">ici</a>.</p>
+</blockquote>
+
+<ol>
+  <li>Pour le mettre sur votre hébergement GitHub Pages, il vous suffit de copier le contenu de votre répertoire monsite/ et de le coller dans votre repository local <code class="highlighter-rouge">username.github.io</code>.</li>
+  <li>Les fichiers apparaissent alors sous GitHub Desktop dans la partie <code class="highlighter-rouge">changed files</code>. Vous pouvez entrer un commentaire de commit et cliquer sur <code class="highlighter-rouge">Commit to master</code> puis <code class="highlighter-rouge">Fetch origin</code>.</li>
+</ol>
+
+<p>Ça y est, vous avez maintenant un site fonctionnel accessible sur votre espace GitHub Pages.</p>
+
+<p>Passons maintenant à l’étape suivante : configurer son site Jekyll.</p>
+
+<p> </p>
+<h2 id="4ème-étape--le-ba-ba-pour-configurer-son-site-jekyll">4ème étape : Le b.a.-ba pour configurer son site Jekyll</h2>
+<p>Vous disposez désormais d’un site Jekyll et vous voulez donc le configurer et le customiser. Je vais vous donner ici quelques pistes pour le faire. Je découperais mon explication en 3 thématiques :</p>
+<ul>
+  <li>Comment configurer votre site ?</li>
+  <li>Comment ajouter des posts ?</li>
+  <li>Redéployer son site</li>
+</ul>
+
+<p>Vous trouverez plus d’information sur <a href="https://jekyllrb.com/docs/">la documentation officielle</a>.</p>
+
+<h3 id="comment-configurer-votre-site-">Comment configurer votre site ?</h3>
+<p>A la racine de votre site, vous trouverez un fichier <code class="highlighter-rouge">_config.yml</code>. Vous pouvez librement y éditer, entre autres :</p>
+<ul>
+  <li>Le titre de votre site via la balise <code class="highlighter-rouge">title</code></li>
+  <li>La description de votre site via la balise <code class="highlighter-rouge">description</code></li>
+  <li>Un lien vers votre compte GitHub avec la balise <code class="highlighter-rouge">github_username</code></li>
+  <li>Etant une page du site et non un post, ce fichier à une disposition (layout) de type <code class="highlighter-rouge">page</code></li>
+</ul>
+
+<p>Vous pouvez modifier votre page <code class="highlighter-rouge">A propos</code> par l’intermédiaire du fichier <code class="highlighter-rouge">about.md</code>. Celui-ci est au format Markdown.</p>
+
+<blockquote>
+  <p>Warning : Un conseil, pour vous familiariser avec la syntaxe Markdown, le mieux est d’essayer de customiser et d’en voir les effets.</p>
+</blockquote>
+
+<p>Vous pouvez accéder à la documentation sur la syntaxe et le principe des pages Jekyll <a href="https://jekyllrb.com/docs/pages/">ici</a>.</p>
+
+<h3 id="comment-ajouter-des-posts-">Comment ajouter des posts ?</h3>
+<p>Comment vous pouvez le voir à l’initialisation de votre site, celui-ci dispose d’un post s’intitulant <code class="highlighter-rouge">Welcome to Jekyll</code>. Celui-ci se situe dans le répertoire <code class="highlighter-rouge">_posts</code> et se trouve dans le fichier <code class="highlighter-rouge">AAAA-MM-dd-welcome-to-jekyll.markdown</code>. Il se compose, entre autres, des éléments suivants :</p>
+<ul>
+  <li>Un titre de post via la balise <code class="highlighter-rouge">title</code></li>
+  <li>Une date de parution via la balise <code class="highlighter-rouge">date</code></li>
+  <li>Un détail du post situé après la ligne <code class="highlighter-rouge">---</code></li>
+  <li>Etant un post du site et non une page à proprement parlé, ce fichier à une disposition (layout) de type <code class="highlighter-rouge">post</code></li>
+</ul>
+
+<p>Chaque ajout d’un nouveau fichier Markdown au sein du répertoire <code class="highlighter-rouge">_post</code> créera un nouveau post au sein de votre site.</p>
+<blockquote>
+  <p>Warning : Un conseil, pour vous familiariser avec la syntaxe Markdown, le mieux est d’essayer de customiser et d’en voir les effets.</p>
+</blockquote>
+
+<p>Vous pouvez accéder à la documentation sur la syntaxe et le principe des posts Jekyll <a href="https://jekyllrb.com/docs/posts/">ici</a>.</p>
+
+<h3 id="déployer-son-site">Déployer son site</h3>
+<p>Après avoir réalisé des modifications, il vous est nécessaire de regénérer votre site Jekyll. La gestion de votre site Jekyll passe par quelques lignes de commande (mais rien de très sorcier).
+Deux commandes sont à retenir :</p>
+
+<p><code class="highlighter-rouge">jekyll serve</code></p>
+
+<p>Utile pour construire votre site à partir du moment où l’un de vos fichiers sources à été modifié. Le site est alors visible localement à l’adresse suivante : https://localhost:4000/</p>
+
+<p><code class="highlighter-rouge">jekyll build</code></p>
+
+<p>Utile pour générer votre site pour l’environnement de Production. Typiquement, lorsque vous pensez disposer d’une version satisfaisante à mettre en ligne, vous pouvez la lancer puis récupérer le contenu du dossier <code class="highlighter-rouge">_site</code> et le déployer sur votre environnement GitHub Pages.</p>
+
+<p>Le reste pourra être étudié plus en profondeur au sein du <a href="https://jekyllrb.com/docs/usage/">référentiel des commandes utiles</a>
+ </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Vous avez appris grâce à ce billet à configurer votre environnement GitHub Pages, y créer un site grâce à Jekyll et découvert les quelques notions de base pour le configurer.</p>
+
+<p>Cela n’exclue évidemment pas un tour sur la documentation officielle pour aller plus loin dans votre utilisation de Jekyll. Néanmoins, cela vous rend autonome à a mise en place d’un site basique mais modulaire et tout ça très rapidement.</p>
+
+  </div><a class="u-url" href="/jekyll/update/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Le blog de Nicolas, tout simplement.</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Le blog de Nicolas, tout simplement.</li><li><a class="u-email" href="mailto:pasdem@il.com">pasdem@il.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/nicolascau"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">nicolascau</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A travers ce blog, un Architecte Java et Responsable Java de Developpez.com vous trace ses problèmes, ses idées, son quotidien d&#39;informaticien.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
