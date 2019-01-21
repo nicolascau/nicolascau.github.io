@@ -1,5 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-01-21T15:34:40+01:00</updated><id>/feed.xml</id><title type="html">Le blog de Nicolas, tout simplement.</title><subtitle>A travers ce blog, un Architecte Java et Responsable Java de Developpez.com vous trace ses problèmes, ses idées, son quotidien d'informaticien.</subtitle><entry><title type="html">Estimer ses coûts de licence(s) Oracle, c’est compliqué !</title><link href="/jekyll/update/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html" rel="alternate" type="text/html" title="Estimer ses coûts de licence(s) Oracle, c’est compliqué !" /><published>2019-01-21T14:00:00+01:00</published><updated>2019-01-21T14:00:00+01:00</updated><id>/jekyll/update/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique</id><content type="html" xml:base="/jekyll/update/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html">&lt;h1 id=&quot;estimer-ses-coûts-de-licences-oracle-cest-compliqué-&quot;&gt;Estimer ses coûts de licence(s) Oracle, c’est compliqué !&lt;/h1&gt;
-&lt;h2 id=&quot;résumé&quot;&gt;Résumé&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-01-21T16:40:42+01:00</updated><id>/feed.xml</id><title type="html">Le blog de Nicolas, tout simplement.</title><subtitle>A travers ce blog, un Architecte Java et Responsable Java de Developpez.com vous trace ses problèmes, ses idées, son quotidien d'informaticien.</subtitle><entry><title type="html">Estimer ses coûts de licence(s) Oracle, c’est compliqué !</title><link href="/chiffrage/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html" rel="alternate" type="text/html" title="Estimer ses coûts de licence(s) Oracle, c’est compliqué !" /><published>2019-01-21T14:00:00+01:00</published><updated>2019-01-21T14:00:00+01:00</updated><id>/chiffrage/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique</id><content type="html" xml:base="/chiffrage/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html">&lt;p&gt;&lt;em&gt;Tags : &lt;code class=&quot;highlighter-rouge&quot;&gt;Oracle, Licence&lt;/code&gt;&lt;/em&gt; et &lt;em&gt;Catégories : &lt;code class=&quot;highlighter-rouge&quot;&gt;Chiffrage&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;résumé&quot;&gt;Résumé&lt;/h1&gt;
 &lt;p&gt;Récemment, j’ai dû m’attaquer à l’exercice de chiffrer le coût en licence d’une base de données Oracle. J’ai remarqué que l’exercice était loin d’être aisé. Je me dis donc qu’un billet pourrait permettre d’y voir un peu plus clair pour tout le monde :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Quel est le mécanisme d’estimation des coûts en licence dans le cadre Oracle ?&lt;/li&gt;
@@ -8,7 +9,7 @@
 
 &lt;p&gt;Bonne lecture !&lt;/p&gt;
 
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Tout d’abord, je préfère ne pas vous promettre monts et merveilles. A la fin de cet article, vous ne saurez pas parfaitement estimer le coût en licence. Vous allez me répondre : Mais alors, il ne sert à rien ton article !&lt;/p&gt;
 
 &lt;p&gt;Oui et non, je m’explique. Cet article a plutôt vocation à vous donner des guides et une meilleure compréhension du sujet avant de contacter Oracle. Vous serez alors mieux armé pour les « affronter » (j’exagère sur les termes, quoique).&lt;/p&gt;
@@ -17,7 +18,7 @@
   &lt;p&gt;Warning : De plus, je ne suis pas un expert Oracle. Je ne remplacerais pas la &lt;a href=&quot;https://docs.oracle.com/cd/B28359_01/license.111/b28287/toc.htm&quot;&gt;documentation officielle&lt;/a&gt; sur le sujet et un coup de fil au service commercial d’Oracle.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h2 id=&quot;prérequis&quot;&gt;Prérequis&lt;/h2&gt;
+&lt;h1 id=&quot;prérequis&quot;&gt;Prérequis&lt;/h1&gt;
 &lt;p&gt;Avant de débuter, je dois vous préciser qu’à l’heure de sortie de ce billet, je travaille dans une ESN majeure. Ceci apporte, bien évidemment des avantages :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Partenariat avec Oracle ce qui a des implications directes sur le coût&lt;/li&gt;
@@ -29,7 +30,7 @@
 &lt;p&gt;Je ne m’attarde pas non plus sur la partie dimensionnement de votre machine contenant Oracle. Je pars donc du principe que vous savez quoi demander en terme matériel.&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
-&lt;h2 id=&quot;1ère-étape--les-différentes-approches-de-coût&quot;&gt;1ère étape : Les différentes approches de coût&lt;/h2&gt;
+&lt;h1 id=&quot;1ère-étape--les-différentes-approches-de-coût&quot;&gt;1ère étape : Les différentes approches de coût&lt;/h1&gt;
 &lt;p&gt;Une licence Oracle peut s’estimer selon deux approches :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Named User Plus&lt;/code&gt; : via le nombre d’utilisateurs&lt;/li&gt;
@@ -38,7 +39,7 @@
 
 &lt;p&gt;Vous trouverez ci-dessous un détail vulgarisé de ces deux approches.&lt;/p&gt;
 
-&lt;h3 id=&quot;lapproche-named-user-plus-nup&quot;&gt;L’approche Named User Plus (NUP)&lt;/h3&gt;
+&lt;h2 id=&quot;lapproche-named-user-plus-nup&quot;&gt;L’approche Named User Plus (NUP)&lt;/h2&gt;
 &lt;p&gt;La métrique &lt;code class=&quot;highlighter-rouge&quot;&gt;Named User Plus&lt;/code&gt; vous permet d’identifier le coût en licence dans une approche de nombre d’utilisateurs.&lt;/p&gt;
 
 &lt;p&gt;Je ne vais pas m’étendre trop sur cette approche puisque je ne l’ai pas mise à l‘épreuve. Cela étant, il faut savoir qu’elle implique de connaître :&lt;/p&gt;
@@ -53,7 +54,7 @@
 
 &lt;p&gt;Dans les gros systèmes, ce nombre de NUP peut monter très rapidement. Il est préférable de réserver cette approche à un nombre limité d’utilisateur. Je vous conseille de vous méfier de cette approche si vous souhaitez utiliser votre plateforme pour réaliser des tests de performance également.&lt;/p&gt;
 
-&lt;h3 id=&quot;lapproche-processor&quot;&gt;L’approche Processor&lt;/h3&gt;
+&lt;h2 id=&quot;lapproche-processor&quot;&gt;L’approche Processor&lt;/h2&gt;
 &lt;p&gt;La métrique &lt;code class=&quot;highlighter-rouge&quot;&gt;Processor&lt;/code&gt; vous permet d’identifier le coût en licence dans une approche nombre de processeurs. Dans ce cas de figure, il n’y a donc pas de limite au nombre d’utilisateur.
 Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 &lt;ul&gt;
@@ -81,15 +82,15 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 
 &lt;p&gt;Passons maintenant à l’étape suivante : demander un devis à Oracle.&lt;/p&gt;
 
-&lt;h2 id=&quot;2ème-étape--demander-un-devis&quot;&gt;2ème étape : Demander un devis&lt;/h2&gt;
+&lt;h1 id=&quot;2ème-étape--demander-un-devis&quot;&gt;2ème étape : Demander un devis&lt;/h1&gt;
 &lt;p&gt;Maintenant que nous connaissons les quelques leviers généraux, nous pouvons effectuer une demande de devis à Oracle.&lt;/p&gt;
 
-&lt;h3 id=&quot;les-règles-à-savoir-pour-contacter-oracle&quot;&gt;Les règles à savoir pour contacter Oracle&lt;/h3&gt;
+&lt;h2 id=&quot;les-règles-à-savoir-pour-contacter-oracle&quot;&gt;Les règles à savoir pour contacter Oracle&lt;/h2&gt;
 &lt;p&gt;Lorsque vous contactez Oracle, sachez qu’ils répartissent leur prestation selon le client à adresser. En fonction du client final (ce n’est parfois pas vous-même mais l’entreprise pour laquelle vous réalisez le projet), Oracle vous mettra en contact avec un commercial ou un autre. Il faut donc bien savoir quelle est l’entreprise cliente destinée à disposer de la base de données Oracle.&lt;/p&gt;
 
 &lt;p&gt;Ensuite, n’hésitez pas à exposer votre cas d’utilisation à Oracle. Vous pourrez ainsi vous appuyer sur leurs conseils pour adapter votre solution technique. Ne partez pas du principe que vous savez précisément ce que vous voulez. Prenez plutôt l’explication des mécanismes de licence Oracle comme un bonus d’explication afin de pouvoir demander des justifications de coût à Oracle dans son devis.&lt;/p&gt;
 
-&lt;h3 id=&quot;les-métriques-nécessaires-à-oracle&quot;&gt;Les métriques nécessaires à Oracle&lt;/h3&gt;
+&lt;h2 id=&quot;les-métriques-nécessaires-à-oracle&quot;&gt;Les métriques nécessaires à Oracle&lt;/h2&gt;
 &lt;p&gt;Pour effectuer un devis, Oracle vous demandera les données suivantes :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Si vous effectuez une approche NUP ou Processor :
@@ -114,7 +115,7 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 
 &lt;p&gt;Je détaillerais par la suite le cas « Processor » uniquement.&lt;/p&gt;
 
-&lt;h3 id=&quot;métrique-n1--edition-de-la-base-de-données&quot;&gt;Métrique N°1 : Edition de la base de données&lt;/h3&gt;
+&lt;h2 id=&quot;métrique-n1--edition-de-la-base-de-données&quot;&gt;Métrique N°1 : Edition de la base de données&lt;/h2&gt;
 &lt;p&gt;Plusieurs éditions de base de données Oracle sont disponibles et diffèrent fortement vis-à-vis des fonctionnalités, tarifs et limitations engendrées.&lt;/p&gt;
 
 &lt;p&gt;Je vous citerais ici les 4 versions les plus courantes (il en existe d’autres) :&lt;/p&gt;
@@ -153,7 +154,7 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
   &lt;li&gt;Les limitations de la version SE2 sont-elles compatibles avec l’utilisation que je prévoie de ma base de données ?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;métrique-n2--options-supplémentaires-souhaitées&quot;&gt;Métrique N°2 : Options supplémentaires souhaitées&lt;/h3&gt;
+&lt;h2 id=&quot;métrique-n2--options-supplémentaires-souhaitées&quot;&gt;Métrique N°2 : Options supplémentaires souhaitées&lt;/h2&gt;
 &lt;p&gt;Je ne vais pas être très verbeux sur le sujet. La documentation Oracle vous en dira davantage.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Sachez que chaque édition d’Oracle permet de disposer d’une option de manière plus ou moins complète. Ce référencement est disponible &lt;a href=&quot;https://docs.oracle.com/en/database/oracle/oracle-database/18/dblic/Licensing-Information.html#GUID-0F9EB85D-4610-4EDF-89C2-4916A0E7AC87&quot;&gt;ici&lt;/a&gt;.&lt;/li&gt;
@@ -169,7 +170,7 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 
 &lt;p&gt;Il est donc intéressant d’appliquer cette vérification car toute activation d’une fonctionnalité non prévue dans l’édition que vous avez causera une requalification automatique en EE (et donc Oracle sera en mesure de vous demander un réalignement financier).&lt;/p&gt;
 
-&lt;h3 id=&quot;métrique-n3--typologie-du-serveur&quot;&gt;Métrique N°3 : Typologie du serveur&lt;/h3&gt;
+&lt;h2 id=&quot;métrique-n3--typologie-du-serveur&quot;&gt;Métrique N°3 : Typologie du serveur&lt;/h2&gt;
 &lt;p&gt;Dans une approche &lt;code class=&quot;highlighter-rouge&quot;&gt;Processor&lt;/code&gt;, Oracle part du principe que l’utilisation de son produit Oracle diffèrera d’un serveur à un autre en fonction de sa puissance. Un coefficient est donc appliqué selon le serveur choisit pour héberger votre Oracle : &lt;code class=&quot;highlighter-rouge&quot;&gt;le Core Factor&lt;/code&gt;. Ceci signifie qu’il vous faut préciser le modèle de processeur que vous souhaitez utiliser.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Warning : Vous pouvez retrouver une liste (qui date de 2018) des processeurs et du coefficient appliqué &lt;a href=&quot;http://www.oracle.com/us/corporate/contracts/processor-core-factor-table-070634.pdf&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
@@ -192,7 +193,7 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt; &lt;/p&gt;
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;J’espère vous avoir éclairé sur la logique de licences concernant la partie base de données Oracle. Ce billet n’a pas la prétention à donner une vision exhaustive du sujet mais plutôt à vous donner un vernis. Grâce à ces quelques éléments, vous devriez mieux savoir :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Quelle édition répondra à vos besoins ?&lt;/li&gt;
@@ -213,8 +214,9 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
   &lt;li&gt;D’autres éditions d’Oracle.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Qui sait, peut être y’aura-t-il un complément à ce billet !&lt;/p&gt;</content><author><name></name></author><category term="Oracle" /><category term="Licence" /><summary type="html">Estimer ses coûts de licence(s) Oracle, c’est compliqué ! Résumé Récemment, j’ai dû m’attaquer à l’exercice de chiffrer le coût en licence d’une base de données Oracle. J’ai remarqué que l’exercice était loin d’être aisé. Je me dis donc qu’un billet pourrait permettre d’y voir un peu plus clair pour tout le monde : Quel est le mécanisme d’estimation des coûts en licence dans le cadre Oracle ? Quelles sont les données minimales nécessaires à l’estimation d’un coût de licence ?</summary></entry><entry><title type="html">Comment se mettre à GitHub Pages et Jekyll ?</title><link href="/jekyll/update/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll.html" rel="alternate" type="text/html" title="Comment se mettre à GitHub Pages et Jekyll ?" /><published>2019-01-17T14:00:00+01:00</published><updated>2019-01-17T14:00:00+01:00</updated><id>/jekyll/update/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll</id><content type="html" xml:base="/jekyll/update/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll.html">&lt;h1 id=&quot;comment-se-mettre-à-github-pages-et-jekyll-&quot;&gt;Comment se mettre à GitHub Pages et Jekyll ?&lt;/h1&gt;
-&lt;h2 id=&quot;résumé&quot;&gt;Résumé&lt;/h2&gt;
+&lt;p&gt;Qui sait, peut être y’aura-t-il un complément à ce billet !&lt;/p&gt;</content><author><name></name></author><category term="Oracle" /><category term="Licence" /><summary type="html">Tags : Oracle, Licence et Catégories : Chiffrage</summary></entry><entry><title type="html">Comment se mettre à GitHub Pages et Jekyll ?</title><link href="/configuration/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll.html" rel="alternate" type="text/html" title="Comment se mettre à GitHub Pages et Jekyll ?" /><published>2019-01-17T14:00:00+01:00</published><updated>2019-01-17T14:00:00+01:00</updated><id>/configuration/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll</id><content type="html" xml:base="/configuration/2019/01/17/comment-se-mettre-a-github-pages-et-jekyll.html">&lt;p&gt;&lt;em&gt;Tags : &lt;code class=&quot;highlighter-rouge&quot;&gt;GitHub Pages, Jekyll&lt;/code&gt;&lt;/em&gt; et &lt;em&gt;Catégories : &lt;code class=&quot;highlighter-rouge&quot;&gt;Configuration&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;résumé&quot;&gt;Résumé&lt;/h1&gt;
 &lt;p&gt;Si comme moi, vous avez envie de monter votre blog sans vous compliquer la vie, ce mini-tutoriel est pour vous. Il vous présentera en quelques actions comment mettre en place un blog en s’appuyant sur du déjà tout prêt. A savoir :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;GitHub pour l’hébergement des sources&lt;/li&gt;
@@ -224,7 +226,7 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 
 &lt;p&gt;A vos claviers !&lt;/p&gt;
 
-&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
 &lt;p&gt;Depuis quelques semaines, j’ai eu envie de me mettre en place un blog. Non pas que j’ai envie de vous raconter ma vie. Néanmoins, je me dis que c’est une façon de capitaliser mes connaissances d’informaticien. Je serais donc mon premier lecteur (c’est déjà ça 😉) !&lt;/p&gt;
 
 &lt;p&gt;Mon besoin est donc simple :&lt;/p&gt;
@@ -238,7 +240,7 @@ Et si vous me suivez, vous arriverez à ceci :&lt;/li&gt;
 
 &lt;p&gt;Superbe, n’est-ce pas ?&lt;/p&gt;
 
-&lt;h2 id=&quot;prérequis&quot;&gt;Prérequis&lt;/h2&gt;
+&lt;h1 id=&quot;prérequis&quot;&gt;Prérequis&lt;/h1&gt;
 &lt;p&gt;Pour commencer tout cela, je me suis déjà créé un compte GitHub. Sans compte GitHub, vous n’irez pas plus loin. Pour créer votre compte, dirigez-vous sur &lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt;.
 Ensuite, j’ai aussi besoin que vous ayez quelques connaissances :&lt;/p&gt;
 &lt;ul&gt;
@@ -250,7 +252,7 @@ Ensuite, j’ai aussi besoin que vous ayez quelques connaissances :&lt;/p&gt;
 &lt;p&gt;Je base aussi mes explications sur un environnement Windows.&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
-&lt;h2 id=&quot;1ère-étape--github-pages-pour-héberger&quot;&gt;1ère étape : GitHub Pages pour héberger&lt;/h2&gt;
+&lt;h1 id=&quot;1ère-étape--github-pages-pour-héberger&quot;&gt;1ère étape : GitHub Pages pour héberger&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; est un service d’hébergement de site statique. Il présente l’avantage d’être directement connecté à votre repository GitHub. Grâce à ce système, vous pouvez créer des sites Web.&lt;/p&gt;
 
 &lt;p&gt;Deux points sont à conserver en tête lors de sa mise en place :&lt;/p&gt;
@@ -304,7 +306,7 @@ Vous pouvez donc enregistrer ce fichier sous ce chemin.&lt;/p&gt;
 &lt;p&gt;Ça y est, vous avez votre site disponible sur Internet ! Vous pouvez retrouver l’ensemble de ces étapes détaillez &lt;a href=&quot;https://pages.github.com/&quot;&gt;ici&lt;/a&gt;.
 Passons maintenant à l’étape suivante : intégrer un site avec Jekyll.
  &lt;/p&gt;
-&lt;h2 id=&quot;2ème-étape--bloguer-avec-jekyll&quot;&gt;2ème étape : Bloguer avec Jekyll&lt;/h2&gt;
+&lt;h1 id=&quot;2ème-étape--bloguer-avec-jekyll&quot;&gt;2ème étape : Bloguer avec Jekyll&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; est une façon de créer votre site statique sous le format que j’appellerais « blog ». Grâce à ce système, vous pouvez écrire ainsi vos billets au format Markdown et les intégrer rapidement.&lt;/p&gt;
 
 &lt;p&gt;Pourquoi utiliser Jekyll plutôt qu’autre chose ? J’utilise Jekyll pour plusieurs raisons :&lt;/p&gt;
@@ -347,7 +349,7 @@ Passons maintenant à l’étape suivante : intégrer un site avec Jekyll.
 
 &lt;p&gt;Passons maintenant à l’étape suivante : réaliser son premier site avec Jekyll.
  &lt;/p&gt;
-&lt;h2 id=&quot;3ème-étape--réaliser-son-premier-site-avec-jekyll&quot;&gt;3ème étape : Réaliser son premier site avec Jekyll&lt;/h2&gt;
+&lt;h1 id=&quot;3ème-étape--réaliser-son-premier-site-avec-jekyll&quot;&gt;3ème étape : Réaliser son premier site avec Jekyll&lt;/h1&gt;
 &lt;p&gt;Maintenant que Jekyll est installé, nous allons créer notre premier site en quelques commandes. Je ne vais donc pas être exhaustif et parcourir volontairement les grandes lignes. Le reste pourra être étudié plus en profondeur au sein de &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;la documentation officielle&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;J’ai décidé volontairement de ne pas créer le site directement au sein de la copie locale de mon repository GitHub. Je réalise donc ensuite des copies locales lorsque j’obtiens une version que je juge satisfaisante de mon site.
@@ -382,7 +384,7 @@ cd C:\Developpement&lt;/li&gt;
 &lt;p&gt;Passons maintenant à l’étape suivante : configurer son site Jekyll.&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
-&lt;h2 id=&quot;4ème-étape--le-ba-ba-pour-configurer-son-site-jekyll&quot;&gt;4ème étape : Le b.a.-ba pour configurer son site Jekyll&lt;/h2&gt;
+&lt;h1 id=&quot;4ème-étape--le-ba-ba-pour-configurer-son-site-jekyll&quot;&gt;4ème étape : Le b.a.-ba pour configurer son site Jekyll&lt;/h1&gt;
 &lt;p&gt;Vous disposez désormais d’un site Jekyll et vous voulez donc le configurer et le customiser. Je vais vous donner ici quelques pistes pour le faire. Je découperais mon explication en 3 thématiques :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Comment configurer votre site ?&lt;/li&gt;
@@ -392,7 +394,7 @@ cd C:\Developpement&lt;/li&gt;
 
 &lt;p&gt;Vous trouverez plus d’information sur &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;la documentation officielle&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;comment-configurer-votre-site-&quot;&gt;Comment configurer votre site ?&lt;/h3&gt;
+&lt;h2 id=&quot;comment-configurer-votre-site-&quot;&gt;Comment configurer votre site ?&lt;/h2&gt;
 &lt;p&gt;A la racine de votre site, vous trouverez un fichier &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. Vous pouvez librement y éditer, entre autres :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Le titre de votre site via la balise &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt;&lt;/li&gt;
@@ -409,7 +411,7 @@ cd C:\Developpement&lt;/li&gt;
 
 &lt;p&gt;Vous pouvez accéder à la documentation sur la syntaxe et le principe des pages Jekyll &lt;a href=&quot;https://jekyllrb.com/docs/pages/&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;comment-ajouter-des-posts-&quot;&gt;Comment ajouter des posts ?&lt;/h3&gt;
+&lt;h2 id=&quot;comment-ajouter-des-posts-&quot;&gt;Comment ajouter des posts ?&lt;/h2&gt;
 &lt;p&gt;Comment vous pouvez le voir à l’initialisation de votre site, celui-ci dispose d’un post s’intitulant &lt;code class=&quot;highlighter-rouge&quot;&gt;Welcome to Jekyll&lt;/code&gt;. Celui-ci se situe dans le répertoire &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; et se trouve dans le fichier &lt;code class=&quot;highlighter-rouge&quot;&gt;AAAA-MM-dd-welcome-to-jekyll.markdown&lt;/code&gt;. Il se compose, entre autres, des éléments suivants :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Un titre de post via la balise &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt;&lt;/li&gt;
@@ -425,7 +427,7 @@ cd C:\Developpement&lt;/li&gt;
 
 &lt;p&gt;Vous pouvez accéder à la documentation sur la syntaxe et le principe des posts Jekyll &lt;a href=&quot;https://jekyllrb.com/docs/posts/&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h3 id=&quot;déployer-son-site&quot;&gt;Déployer son site&lt;/h3&gt;
+&lt;h2 id=&quot;déployer-son-site&quot;&gt;Déployer son site&lt;/h2&gt;
 &lt;p&gt;Après avoir réalisé des modifications, il vous est nécessaire de regénérer votre site Jekyll. La gestion de votre site Jekyll passe par quelques lignes de commande (mais rien de très sorcier).
 Deux commandes sont à retenir :&lt;/p&gt;
 
@@ -439,7 +441,7 @@ Deux commandes sont à retenir :&lt;/p&gt;
 
 &lt;p&gt;Le reste pourra être étudié plus en profondeur au sein du &lt;a href=&quot;https://jekyllrb.com/docs/usage/&quot;&gt;référentiel des commandes utiles&lt;/a&gt;
  &lt;/p&gt;
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;Vous avez appris grâce à ce billet à configurer votre environnement GitHub Pages, y créer un site grâce à Jekyll et découvert les quelques notions de base pour le configurer.&lt;/p&gt;
 
-&lt;p&gt;Cela n’exclue évidemment pas un tour sur la documentation officielle pour aller plus loin dans votre utilisation de Jekyll. Néanmoins, cela vous rend autonome à a mise en place d’un site basique mais modulaire et tout ça très rapidement.&lt;/p&gt;</content><author><name></name></author><category term="GitHub Pages" /><category term="Jekyll" /><summary type="html">Comment se mettre à GitHub Pages et Jekyll ? Résumé Si comme moi, vous avez envie de monter votre blog sans vous compliquer la vie, ce mini-tutoriel est pour vous. Il vous présentera en quelques actions comment mettre en place un blog en s’appuyant sur du déjà tout prêt. A savoir : GitHub pour l’hébergement des sources GitHub Pages pour l’accessibilité du site Web Jekyll pour la mise en place d’un blog structuré en quelques clics</summary></entry></feed>
+&lt;p&gt;Cela n’exclue évidemment pas un tour sur la documentation officielle pour aller plus loin dans votre utilisation de Jekyll. Néanmoins, cela vous rend autonome à a mise en place d’un site basique mais modulaire et tout ça très rapidement.&lt;/p&gt;</content><author><name></name></author><category term="GitHub Pages" /><category term="Jekyll" /><summary type="html">Tags : GitHub Pages, Jekyll et Catégories : Configuration</summary></entry></feed>
