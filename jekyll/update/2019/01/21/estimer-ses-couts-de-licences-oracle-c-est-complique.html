@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>Estimer ses coûts de licence(s) Oracle, c’est compliqué ! | Le blog de Nicolas, tout simplement.</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Estimer ses coûts de licence(s) Oracle, c’est compliqué !" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Estimer ses coûts de licence(s) Oracle, c’est compliqué ! Résumé Récemment, j’ai dû m’attaquer à l’exercice de chiffrer le coût en licence d’une base de données Oracle. J’ai remarqué que l’exercice était loin d’être aisé. Je me dis donc qu’un billet pourrait permettre d’y voir un peu plus clair pour tout le monde : Quel est le mécanisme d’estimation des coûts en licence dans le cadre Oracle ? Quelles sont les données minimales nécessaires à l’estimation d’un coût de licence ?" />
+<meta property="og:description" content="Estimer ses coûts de licence(s) Oracle, c’est compliqué ! Résumé Récemment, j’ai dû m’attaquer à l’exercice de chiffrer le coût en licence d’une base de données Oracle. J’ai remarqué que l’exercice était loin d’être aisé. Je me dis donc qu’un billet pourrait permettre d’y voir un peu plus clair pour tout le monde : Quel est le mécanisme d’estimation des coûts en licence dans le cadre Oracle ? Quelles sont les données minimales nécessaires à l’estimation d’un coût de licence ?" />
+<link rel="canonical" href="/jekyll/update/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html" />
+<meta property="og:url" content="/jekyll/update/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html" />
+<meta property="og:site_name" content="Le blog de Nicolas, tout simplement." />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-01-21T14:00:00+01:00" />
+<script type="application/ld+json">
+{"url":"/jekyll/update/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html","headline":"Estimer ses coûts de licence(s) Oracle, c’est compliqué !","description":"Estimer ses coûts de licence(s) Oracle, c’est compliqué ! Résumé Récemment, j’ai dû m’attaquer à l’exercice de chiffrer le coût en licence d’une base de données Oracle. J’ai remarqué que l’exercice était loin d’être aisé. Je me dis donc qu’un billet pourrait permettre d’y voir un peu plus clair pour tout le monde : Quel est le mécanisme d’estimation des coûts en licence dans le cadre Oracle ? Quelles sont les données minimales nécessaires à l’estimation d’un coût de licence ?","datePublished":"2019-01-21T14:00:00+01:00","dateModified":"2019-01-21T14:00:00+01:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/jekyll/update/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Le blog de Nicolas, tout simplement." /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Le blog de Nicolas, tout simplement.</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">A propos</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Estimer ses coûts de licence(s) Oracle, c’est compliqué !</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-01-21T14:00:00+01:00" itemprop="datePublished">Jan 21, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h1 id="estimer-ses-coûts-de-licences-oracle-cest-compliqué-">Estimer ses coûts de licence(s) Oracle, c’est compliqué !</h1>
+<h2 id="résumé">Résumé</h2>
+<p>Récemment, j’ai dû m’attaquer à l’exercice de chiffrer le coût en licence d’une base de données Oracle. J’ai remarqué que l’exercice était loin d’être aisé. Je me dis donc qu’un billet pourrait permettre d’y voir un peu plus clair pour tout le monde :</p>
+<ul>
+  <li>Quel est le mécanisme d’estimation des coûts en licence dans le cadre Oracle ?</li>
+  <li>Quelles sont les données minimales nécessaires à l’estimation d’un coût de licence ?</li>
+</ul>
+
+<p>Bonne lecture !</p>
+
+<h2 id="introduction">Introduction</h2>
+<p>Tout d’abord, je préfère ne pas vous promettre monts et merveilles. A la fin de cet article, vous ne saurez pas parfaitement estimer le coût en licence. Vous allez me répondre : Mais alors, il ne sert à rien ton article !</p>
+
+<p>Oui et non, je m’explique. Cet article a plutôt vocation à vous donner des guides et une meilleure compréhension du sujet avant de contacter Oracle. Vous serez alors mieux armé pour les « affronter » (j’exagère sur les termes, quoique).</p>
+
+<blockquote>
+  <p>Warning : De plus, je ne suis pas un expert Oracle. Je ne remplacerais pas la <a href="https://docs.oracle.com/cd/B28359_01/license.111/b28287/toc.htm">documentation officielle</a> sur le sujet et un coup de fil au service commercial d’Oracle.</p>
+</blockquote>
+
+<h2 id="prérequis">Prérequis</h2>
+<p>Avant de débuter, je dois vous préciser qu’à l’heure de sortie de ce billet, je travaille dans une ESN majeure. Ceci apporte, bien évidemment des avantages :</p>
+<ul>
+  <li>Partenariat avec Oracle ce qui a des implications directes sur le coût</li>
+  <li>Point(s) de contact dédié(s) côté Oracle</li>
+</ul>
+
+<p>Si vous travaillez dans une ESN importante, vous disposerez probablement d’une équivalence. Dans une autre structure, ce sera surement moins le cas.</p>
+
+<p>Je ne m’attarde pas non plus sur la partie dimensionnement de votre machine contenant Oracle. Je pars donc du principe que vous savez quoi demander en terme matériel.</p>
+
+<p> </p>
+<h2 id="1ère-étape--les-différentes-approches-de-coût">1ère étape : Les différentes approches de coût</h2>
+<p>Une licence Oracle peut s’estimer selon deux approches :</p>
+<ul>
+  <li><code class="highlighter-rouge">Named User Plus</code> : via le nombre d’utilisateurs</li>
+  <li><code class="highlighter-rouge">Processor</code> : via le nombre de cœur de sa machine</li>
+</ul>
+
+<p>Vous trouverez ci-dessous un détail vulgarisé de ces deux approches.</p>
+
+<h3 id="lapproche-named-user-plus-nup">L’approche Named User Plus (NUP)</h3>
+<p>La métrique <code class="highlighter-rouge">Named User Plus</code> vous permet d’identifier le coût en licence dans une approche de nombre d’utilisateurs.</p>
+
+<p>Je ne vais pas m’étendre trop sur cette approche puisque je ne l’ai pas mise à l‘épreuve. Cela étant, il faut savoir qu’elle implique de connaître :</p>
+<ul>
+  <li>Le nombre d’utilisateur allant se connecter à l’application (et non le nombre de pool de connexion à la base de données)</li>
+  <li>Le nombre d’interaction de systèmes automatisés tels que des bus de données, des injecteurs de données, des batchs automatisés, etc.</li>
+</ul>
+
+<blockquote>
+  <p>Warning : Comme on peut le voir dans les exemples que je cite, le terme « Named User Plus » est trompeur. En effet, il n’est pas compté que les utilisateurs d’un système.</p>
+</blockquote>
+
+<p>Dans les gros systèmes, ce nombre de NUP peut monter très rapidement. Il est préférable de réserver cette approche à un nombre limité d’utilisateur. Je vous conseille de vous méfier de cette approche si vous souhaitez utiliser votre plateforme pour réaliser des tests de performance également.</p>
+
+<h3 id="lapproche-processor">L’approche Processor</h3>
+<p>La métrique <code class="highlighter-rouge">Processor</code> vous permet d’identifier le coût en licence dans une approche nombre de processeurs. Dans ce cas de figure, il n’y a donc pas de limite au nombre d’utilisateur.
+Il y a plusieurs règles à garder en tête :</p>
+<ul>
+  <li>
+    <p>Si vous voulez intégrer Oracle dans un environnement virtualisé, il faut savoir que le coût de licence s’appuie sur le nombre de cœurs physiques de votre serveur (et non le nombre de CPU émulé par votre outil de virtualisation sur votre machine virtuelle).</p>
+  </li>
+  <li>
+    <p>Pire, si vous utilisez une même instance VMWare adressant plusieurs serveurs physiques, Oracle comptabilisera l’ensemble des serveurs physiques pour estimer ses coûts de licence (la note risque d’être salée !).</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>Warning : Au vu de ce constat, il est préférable de ne pas intégrer Oracle dans un environnement virtualisé contenant d’autres machines virtualisées (dédiées elles à d’autres taches). Je conseille donc de réserver un serveur physique dédié à votre utilisation d’Oracle. Vous pouvez alors le dimensionner au vu de vos seuls besoins Oracle. Cette approche vous permet de contrôler finement l’empreinte physique et donc d’affiner votre coût de licence.</p>
+</blockquote>
+
+<blockquote>
+  <p>Warning : Je suis volontairement réducteur sur ce point. Oracle reconnait certaines technologies de partitionnement d’un serveur. Vous trouverez plus d’information au <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=7&amp;ved=2ahUKEwippfWh0_7fAhXJzKQKHZXsBeQQFjAGegQIBRAC&amp;url=https%3A%2F%2Fwww.aspera.com%2Ffile%2F33946%2Flivre_blanc_10_choses_a_savoir_audit_oracle%25253Fpage%25253D2214%252526L%25253D2&amp;usg=AOvVaw1p5_oyiEwbDKbHfPSb8kzX">chapitre 7</a> du document que je cite en fin de billet.</p>
+</blockquote>
+
+<ul>
+  <li>Le modèle de serveur a également son importance. En fonction du type de cœur que détient votre serveur physique, Oracle applique un ratio dans ses calculs de coût. Vous trouverez plus de détail sur ce point dans le chapitre suivant.</li>
+</ul>
+
+<p>Ça y est, vous avez désormais plusieurs éléments de compréhension pour mieux estimer vos coûts de licence Oracle.</p>
+
+<p>Passons maintenant à l’étape suivante : demander un devis à Oracle.</p>
+
+<h2 id="2ème-étape--demander-un-devis">2ème étape : Demander un devis</h2>
+<p>Maintenant que nous connaissons les quelques leviers généraux, nous pouvons effectuer une demande de devis à Oracle.</p>
+
+<h3 id="les-règles-à-savoir-pour-contacter-oracle">Les règles à savoir pour contacter Oracle</h3>
+<p>Lorsque vous contactez Oracle, sachez qu’ils répartissent leur prestation selon le client à adresser. En fonction du client final (ce n’est parfois pas vous-même mais l’entreprise pour laquelle vous réalisez le projet), Oracle vous mettra en contact avec un commercial ou un autre. Il faut donc bien savoir quelle est l’entreprise cliente destinée à disposer de la base de données Oracle.</p>
+
+<p>Ensuite, n’hésitez pas à exposer votre cas d’utilisation à Oracle. Vous pourrez ainsi vous appuyer sur leurs conseils pour adapter votre solution technique. Ne partez pas du principe que vous savez précisément ce que vous voulez. Prenez plutôt l’explication des mécanismes de licence Oracle comme un bonus d’explication afin de pouvoir demander des justifications de coût à Oracle dans son devis.</p>
+
+<h3 id="les-métriques-nécessaires-à-oracle">Les métriques nécessaires à Oracle</h3>
+<p>Pour effectuer un devis, Oracle vous demandera les données suivantes :</p>
+<ul>
+  <li>Si vous effectuez une approche NUP ou Processor :
+    <ul>
+      <li>Dans le cas NUP
+        <ul>
+          <li>Edition de la base de données</li>
+          <li>Options supplémentaires souhaitées</li>
+          <li>Nombre d’utilisateurs global (cf. explication dans la 1ère étape)</li>
+        </ul>
+      </li>
+      <li>Dans le cas Processor
+        <ul>
+          <li>Edition de la base de données</li>
+          <li>Options supplémentaires souhaitées</li>
+          <li>Typologie du serveur : modèle de processeur et nombre de cœur physique</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Je détaillerais par la suite le cas « Processor » uniquement.</p>
+
+<h3 id="métrique-n1--edition-de-la-base-de-données">Métrique N°1 : Edition de la base de données</h3>
+<p>Plusieurs éditions de base de données Oracle sont disponibles et diffèrent fortement vis-à-vis des fonctionnalités, tarifs et limitations engendrées.</p>
+
+<p>Je vous citerais ici les 4 versions les plus courantes (il en existe d’autres) :</p>
+<ul>
+  <li><code class="highlighter-rouge">Oracle Database Enterprise Edition (EE)</code> : version la plus complète et la plus coûteuse. Grâce à cette version, il n’y a pas de limitation matérielle ou utilisateurs. Il est possible d’accéder au paramétrage de la base de données pour des besoins de tuning (entre autres). Il est également possible d’y ajouter des options à acheter en complément du coût de la licence.</li>
+</ul>
+
+<blockquote>
+  <p>Warning : Vous pourrez retrouver l’ensemble des options disponibles décrites au sein de <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/dblic/Licensing-Information.html#GUID-0F9EB85D-4610-4EDF-89C2-4916A0E7AC87">cette documentation</a>.</p>
+</blockquote>
+
+<blockquote>
+  <p>Warning : Cette version est intéressante dans un cadre professionnel où il y a des besoins importants en ressource et/ou des besoins de tuning.</p>
+</blockquote>
+
+<ul>
+  <li><code class="highlighter-rouge">Oracle Database Standard Edition 2 (SE2)</code> : version plus limitée que la version EE. Il n’existe pas d’option disponible. Il n’est pas possible d’accéder au paramétrage de la base de données (tout du moins, seulement de façon limitée). De plus, cette version est limitée à 2 sockets et une utilisation à 16 threads maximum par CPU.
+    <blockquote>
+      <p>Warning : Cette version est intéressante dans un cadre professionnel standard où les besoins en ressources sont maîtrisés et conforme aux limitations évoquées ci-dessus.</p>
+    </blockquote>
+  </li>
+  <li><code class="highlighter-rouge">Oracle Database Personal Edition (PE)</code> : version à un seul utilisateur qui permet une compatibilité avec les versions EE et SE2. Celle-ci inclue plusieurs composants de la version EE.
+    <blockquote>
+      <p>Warning : Cette version est intéressante dans un cadre de développement et de tests mono-utilisateur.</p>
+    </blockquote>
+  </li>
+  <li><code class="highlighter-rouge">Oracle Database Express Edition (XE)</code> : version gratuite permettant d’utiliser Oracle Database pour ses besoins personnels. Celle-ci dispose de fortes limitations et est davantage à réserver à un cadre non professionnel.
+    <blockquote>
+      <p>Warning : Cette version est à limiter à un cadre non professionnel (elle n’est pas adaptée à une utilisation en production par exemple). Plus de détail disponible <a href="https://www.oracle.com/database/technologies/appdev/xe.html">ici</a>.</p>
+    </blockquote>
+  </li>
+</ul>
+
+<p>Généralement, dans un cadre d’application en production, vous hésiterez entre la version EE et la version SE2. Et au vu des écarts de tarif (conséquents), vous vous poserez la question :</p>
+<ul>
+  <li>Les limitations de la version SE2 sont-elles compatibles avec l’utilisation que je prévoie de ma base de données ?</li>
+</ul>
+
+<h3 id="métrique-n2--options-supplémentaires-souhaitées">Métrique N°2 : Options supplémentaires souhaitées</h3>
+<p>Je ne vais pas être très verbeux sur le sujet. La documentation Oracle vous en dira davantage.</p>
+<ul>
+  <li>Sachez que chaque édition d’Oracle permet de disposer d’une option de manière plus ou moins complète. Ce référencement est disponible <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/dblic/Licensing-Information.html#GUID-0F9EB85D-4610-4EDF-89C2-4916A0E7AC87">ici</a>.</li>
+  <li>Sachez que pour certaines éditions d’Oracle (la EE entre autres), il est possible d’y ajouter des fonctionnalités supplémentaires. La liste des fonctionnalités supplémentaires est disponible <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/dblic/Licensing-Information.html#GUID-AB56CEE3-955E-4E56-8B44-6075E889C283">ici</a>.</li>
+  <li>Sachez que pour certaines d’éditions d’Oracle (la EE entre autres), il est possible de souscrire à des packs comprenant une liste de fonctionnalités supplémentaires. Ce descriptif est disponible <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/dblic/Licensing-Information.html#GUID-68A4128C-4F52-4441-8BC0-A66F5B3EEC35">ici</a>.</li>
+</ul>
+
+<blockquote>
+  <p>Warning : Oracle fournit également une procédure pour vérifier les options activées sur votre base de données. Ceci nécessite l’usage d’un script SQL. L’ensemble de la procédure est disponible <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/dblic/Licensing-Information.html#GUID-C3042D9A-5596-41A3-A08A-4581FED7634F">ici</a>.</p>
+</blockquote>
+
+<p>Il peut résider une vraie difficulté pour savoir ce qui est activé ou non de base au sein de vos options de base de données. Cela est accentué par le fait que plusieurs fonctionnalités sont disponibles mais non activées dans une version SE2. Il suffit alors simplement de les activer.</p>
+
+<p>Il est donc intéressant d’appliquer cette vérification car toute activation d’une fonctionnalité non prévue dans l’édition que vous avez causera une requalification automatique en EE (et donc Oracle sera en mesure de vous demander un réalignement financier).</p>
+
+<h3 id="métrique-n3--typologie-du-serveur">Métrique N°3 : Typologie du serveur</h3>
+<p>Dans une approche <code class="highlighter-rouge">Processor</code>, Oracle part du principe que l’utilisation de son produit Oracle diffèrera d’un serveur à un autre en fonction de sa puissance. Un coefficient est donc appliqué selon le serveur choisit pour héberger votre Oracle : <code class="highlighter-rouge">le Core Factor</code>. Ceci signifie qu’il vous faut préciser le modèle de processeur que vous souhaitez utiliser.</p>
+<blockquote>
+  <p>Warning : Vous pouvez retrouver une liste (qui date de 2018) des processeurs et du coefficient appliqué <a href="http://www.oracle.com/us/corporate/contracts/processor-core-factor-table-070634.pdf">ici</a>.</p>
+</blockquote>
+
+<p>A partir du processeur utilisé et selon l’édition choisit, il faut :</p>
+<ul>
+  <li>Soit prendre en compte le nombre de processeur</li>
+  <li>Soit prendre en compte le nombre de cœur</li>
+</ul>
+
+<p>Dans le cas d’une édition SE, le calcul de licence se base sur le nombre de sockets disponibles. On peut partir du postula qu’un processeur équivaut à un socket.</p>
+<blockquote>
+  <p>Warning : C’est donc le nombre de processeur qui sera nécessaire à Oracle pour estimer le coût.</p>
+</blockquote>
+
+<p>Dans le cas d’une édition EE, le calcul de licence se base sur le nombre de cœurs disponibles. Il sera appliqué le <code class="highlighter-rouge">Core Factor</code> à ce nombre de cœurs.</p>
+<blockquote>
+  <p>Warning : C’est donc le nombre de cœurs qui sera nécessaire à Oracle pour estimer le coût.</p>
+</blockquote>
+
+<p> </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>J’espère vous avoir éclairé sur la logique de licences concernant la partie base de données Oracle. Ce billet n’a pas la prétention à donner une vision exhaustive du sujet mais plutôt à vous donner un vernis. Grâce à ces quelques éléments, vous devriez mieux savoir :</p>
+<ul>
+  <li>Quelle édition répondra à vos besoins ?</li>
+  <li>Quel matériel associé à vos besoins pour adapter vos coûts de licence de façon réaliste ?</li>
+</ul>
+
+<p>Pour écrire ce billet, je me suis appuyé sur mon expérience personnelle mais également sur la lecture des documents suivants :</p>
+<ul>
+  <li><a href="https://www.softwareone.com/en/blog/licensing-oracle-by-processor-or-named-user-plus-which-metric-is-right-for-you">Cet article</a> vous donnera un avant-goût du sujet en survolant quelques problématiques</li>
+  <li>Et je recommande spécialement la lecture de <a href="https://www.google.com/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=7&amp;ved=2ahUKEwippfWh0_7fAhXJzKQKHZXsBeQQFjAGegQIBRAC&amp;url=https%3A%2F%2Fwww.aspera.com%2Ffile%2F33946%2Flivre_blanc_10_choses_a_savoir_audit_oracle%25253Fpage%25253D2214%252526L%25253D2&amp;usg=AOvVaw1p5_oyiEwbDKbHfPSb8kzX">ce document</a> qui clarifie de façon plus exhaustive les règles s’appliquant aux licences Oracle (même si celui-ci date de 2016).</li>
+</ul>
+
+<p>Plusieurs éléments sont volontairement écartés de ce billet. Je vous précise ici les critères que j’ai eu à prendre en compte. Néanmoins, il faut savoir qu’il existe d’autres variables d’ajustement :</p>
+<ul>
+  <li>La notion de licence perpétuelle ou temporaire ;</li>
+  <li>Les minimums de licence NUP à utiliser selon l’édition choisie ;</li>
+  <li>Les solutions de partitioning au niveau physique ou logique possibles ;</li>
+  <li>D’autres éditions d’Oracle.</li>
+</ul>
+
+<p>Qui sait, peut être y’aura-t-il un complément à ce billet !</p>
+
+  </div><a class="u-url" href="/jekyll/update/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Le blog de Nicolas, tout simplement.</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Le blog de Nicolas, tout simplement.</li><li><a class="u-email" href="mailto:pasdem@il.com">pasdem@il.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/nicolascau"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">nicolascau</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>A travers ce blog, un Architecte Java et Responsable Java de Developpez.com vous trace ses problèmes, ses idées, son quotidien d&#39;informaticien.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
