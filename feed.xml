@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-01-21T16:40:42+01:00</updated><id>/feed.xml</id><title type="html">Le blog de Nicolas, tout simplement.</title><subtitle>A travers ce blog, un Architecte Java et Responsable Java de Developpez.com vous trace ses problèmes, ses idées, son quotidien d'informaticien.</subtitle><entry><title type="html">Estimer ses coûts de licence(s) Oracle, c’est compliqué !</title><link href="/chiffrage/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html" rel="alternate" type="text/html" title="Estimer ses coûts de licence(s) Oracle, c’est compliqué !" /><published>2019-01-21T14:00:00+01:00</published><updated>2019-01-21T14:00:00+01:00</updated><id>/chiffrage/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique</id><content type="html" xml:base="/chiffrage/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html">&lt;p&gt;&lt;em&gt;Tags : &lt;code class=&quot;highlighter-rouge&quot;&gt;Oracle, Licence&lt;/code&gt;&lt;/em&gt; et &lt;em&gt;Catégories : &lt;code class=&quot;highlighter-rouge&quot;&gt;Chiffrage&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-02-04T16:23:04+01:00</updated><id>/feed.xml</id><title type="html">Le blog de Nicolas, tout simplement.</title><subtitle>A travers ce blog, un Architecte Java et Responsable Java de Developpez.com vous trace ses problèmes, ses idées, son quotidien d'informaticien.</subtitle><entry><title type="html">Estimer ses coûts de licence(s) Oracle, c’est compliqué !</title><link href="/chiffrage/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html" rel="alternate" type="text/html" title="Estimer ses coûts de licence(s) Oracle, c’est compliqué !" /><published>2019-01-21T14:00:00+01:00</published><updated>2019-01-21T14:00:00+01:00</updated><id>/chiffrage/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique</id><content type="html" xml:base="/chiffrage/2019/01/21/estimer-ses-couts-de-licences-oracle-c-est-complique.html">&lt;p&gt;&lt;em&gt;Tags : &lt;code class=&quot;highlighter-rouge&quot;&gt;Oracle, Licence&lt;/code&gt;&lt;/em&gt; et &lt;em&gt;Catégories : &lt;code class=&quot;highlighter-rouge&quot;&gt;Chiffrage&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;résumé&quot;&gt;Résumé&lt;/h1&gt;
 &lt;p&gt;Récemment, j’ai dû m’attaquer à l’exercice de chiffrer le coût en licence d’une base de données Oracle. J’ai remarqué que l’exercice était loin d’être aisé. Je me dis donc qu’un billet pourrait permettre d’y voir un peu plus clair pour tout le monde :&lt;/p&gt;
@@ -30,7 +30,7 @@
 &lt;p&gt;Je ne m’attarde pas non plus sur la partie dimensionnement de votre machine contenant Oracle. Je pars donc du principe que vous savez quoi demander en terme matériel.&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
-&lt;h1 id=&quot;1ère-étape--les-différentes-approches-de-coût&quot;&gt;1ère étape : Les différentes approches de coût&lt;/h1&gt;
+&lt;h1 id=&quot;1-1ère-étape--les-différentes-approches-de-coût&quot;&gt;1. 1ère étape : Les différentes approches de coût&lt;/h1&gt;
 &lt;p&gt;Une licence Oracle peut s’estimer selon deux approches :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Named User Plus&lt;/code&gt; : via le nombre d’utilisateurs&lt;/li&gt;
@@ -39,7 +39,7 @@
 
 &lt;p&gt;Vous trouverez ci-dessous un détail vulgarisé de ces deux approches.&lt;/p&gt;
 
-&lt;h2 id=&quot;lapproche-named-user-plus-nup&quot;&gt;L’approche Named User Plus (NUP)&lt;/h2&gt;
+&lt;h2 id=&quot;11-lapproche-named-user-plus-nup&quot;&gt;1.1. L’approche Named User Plus (NUP)&lt;/h2&gt;
 &lt;p&gt;La métrique &lt;code class=&quot;highlighter-rouge&quot;&gt;Named User Plus&lt;/code&gt; vous permet d’identifier le coût en licence dans une approche de nombre d’utilisateurs.&lt;/p&gt;
 
 &lt;p&gt;Je ne vais pas m’étendre trop sur cette approche puisque je ne l’ai pas mise à l‘épreuve. Cela étant, il faut savoir qu’elle implique de connaître :&lt;/p&gt;
@@ -54,7 +54,7 @@
 
 &lt;p&gt;Dans les gros systèmes, ce nombre de NUP peut monter très rapidement. Il est préférable de réserver cette approche à un nombre limité d’utilisateur. Je vous conseille de vous méfier de cette approche si vous souhaitez utiliser votre plateforme pour réaliser des tests de performance également.&lt;/p&gt;
 
-&lt;h2 id=&quot;lapproche-processor&quot;&gt;L’approche Processor&lt;/h2&gt;
+&lt;h2 id=&quot;12-lapproche-processor&quot;&gt;1.2. L’approche Processor&lt;/h2&gt;
 &lt;p&gt;La métrique &lt;code class=&quot;highlighter-rouge&quot;&gt;Processor&lt;/code&gt; vous permet d’identifier le coût en licence dans une approche nombre de processeurs. Dans ce cas de figure, il n’y a donc pas de limite au nombre d’utilisateur.
 Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 &lt;ul&gt;
@@ -82,15 +82,15 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 
 &lt;p&gt;Passons maintenant à l’étape suivante : demander un devis à Oracle.&lt;/p&gt;
 
-&lt;h1 id=&quot;2ème-étape--demander-un-devis&quot;&gt;2ème étape : Demander un devis&lt;/h1&gt;
+&lt;h1 id=&quot;2-2ème-étape--demander-un-devis&quot;&gt;2. 2ème étape : Demander un devis&lt;/h1&gt;
 &lt;p&gt;Maintenant que nous connaissons les quelques leviers généraux, nous pouvons effectuer une demande de devis à Oracle.&lt;/p&gt;
 
-&lt;h2 id=&quot;les-règles-à-savoir-pour-contacter-oracle&quot;&gt;Les règles à savoir pour contacter Oracle&lt;/h2&gt;
+&lt;h2 id=&quot;21-les-règles-à-savoir-pour-contacter-oracle&quot;&gt;2.1. Les règles à savoir pour contacter Oracle&lt;/h2&gt;
 &lt;p&gt;Lorsque vous contactez Oracle, sachez qu’ils répartissent leur prestation selon le client à adresser. En fonction du client final (ce n’est parfois pas vous-même mais l’entreprise pour laquelle vous réalisez le projet), Oracle vous mettra en contact avec un commercial ou un autre. Il faut donc bien savoir quelle est l’entreprise cliente destinée à disposer de la base de données Oracle.&lt;/p&gt;
 
 &lt;p&gt;Ensuite, n’hésitez pas à exposer votre cas d’utilisation à Oracle. Vous pourrez ainsi vous appuyer sur leurs conseils pour adapter votre solution technique. Ne partez pas du principe que vous savez précisément ce que vous voulez. Prenez plutôt l’explication des mécanismes de licence Oracle comme un bonus d’explication afin de pouvoir demander des justifications de coût à Oracle dans son devis.&lt;/p&gt;
 
-&lt;h2 id=&quot;les-métriques-nécessaires-à-oracle&quot;&gt;Les métriques nécessaires à Oracle&lt;/h2&gt;
+&lt;h2 id=&quot;22-les-métriques-nécessaires-à-oracle&quot;&gt;2.2. Les métriques nécessaires à Oracle&lt;/h2&gt;
 &lt;p&gt;Pour effectuer un devis, Oracle vous demandera les données suivantes :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Si vous effectuez une approche NUP ou Processor :
@@ -100,6 +100,7 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
           &lt;li&gt;Edition de la base de données&lt;/li&gt;
           &lt;li&gt;Options supplémentaires souhaitées&lt;/li&gt;
           &lt;li&gt;Nombre d’utilisateurs global (cf. explication dans la 1ère étape)&lt;/li&gt;
+          &lt;li&gt;Durée de licence&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
       &lt;li&gt;Dans le cas Processor
@@ -107,6 +108,7 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
           &lt;li&gt;Edition de la base de données&lt;/li&gt;
           &lt;li&gt;Options supplémentaires souhaitées&lt;/li&gt;
           &lt;li&gt;Typologie du serveur : modèle de processeur et nombre de cœur physique&lt;/li&gt;
+          &lt;li&gt;Durée de licence&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
@@ -115,7 +117,7 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 
 &lt;p&gt;Je détaillerais par la suite le cas « Processor » uniquement.&lt;/p&gt;
 
-&lt;h2 id=&quot;métrique-n1--edition-de-la-base-de-données&quot;&gt;Métrique N°1 : Edition de la base de données&lt;/h2&gt;
+&lt;h3 id=&quot;221-métrique-n1--edition-de-la-base-de-données&quot;&gt;2.2.1. Métrique N°1 : Edition de la base de données&lt;/h3&gt;
 &lt;p&gt;Plusieurs éditions de base de données Oracle sont disponibles et diffèrent fortement vis-à-vis des fonctionnalités, tarifs et limitations engendrées.&lt;/p&gt;
 
 &lt;p&gt;Je vous citerais ici les 4 versions les plus courantes (il en existe d’autres) :&lt;/p&gt;
@@ -154,7 +156,7 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
   &lt;li&gt;Les limitations de la version SE2 sont-elles compatibles avec l’utilisation que je prévoie de ma base de données ?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2 id=&quot;métrique-n2--options-supplémentaires-souhaitées&quot;&gt;Métrique N°2 : Options supplémentaires souhaitées&lt;/h2&gt;
+&lt;h3 id=&quot;222-métrique-n2--options-supplémentaires-souhaitées&quot;&gt;2.2.2. Métrique N°2 : Options supplémentaires souhaitées&lt;/h3&gt;
 &lt;p&gt;Je ne vais pas être très verbeux sur le sujet. La documentation Oracle vous en dira davantage.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Sachez que chaque édition d’Oracle permet de disposer d’une option de manière plus ou moins complète. Ce référencement est disponible &lt;a href=&quot;https://docs.oracle.com/en/database/oracle/oracle-database/18/dblic/Licensing-Information.html#GUID-0F9EB85D-4610-4EDF-89C2-4916A0E7AC87&quot;&gt;ici&lt;/a&gt;.&lt;/li&gt;
@@ -170,7 +172,7 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 
 &lt;p&gt;Il est donc intéressant d’appliquer cette vérification car toute activation d’une fonctionnalité non prévue dans l’édition que vous avez causera une requalification automatique en EE (et donc Oracle sera en mesure de vous demander un réalignement financier).&lt;/p&gt;
 
-&lt;h2 id=&quot;métrique-n3--typologie-du-serveur&quot;&gt;Métrique N°3 : Typologie du serveur&lt;/h2&gt;
+&lt;h3 id=&quot;223-métrique-n3--typologie-du-serveur&quot;&gt;2.2.3. Métrique N°3 : Typologie du serveur&lt;/h3&gt;
 &lt;p&gt;Dans une approche &lt;code class=&quot;highlighter-rouge&quot;&gt;Processor&lt;/code&gt;, Oracle part du principe que l’utilisation de son produit Oracle diffèrera d’un serveur à un autre en fonction de sa puissance. Un coefficient est donc appliqué selon le serveur choisit pour héberger votre Oracle : &lt;code class=&quot;highlighter-rouge&quot;&gt;le Core Factor&lt;/code&gt;. Ceci signifie qu’il vous faut préciser le modèle de processeur que vous souhaitez utiliser.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Warning : Vous pouvez retrouver une liste (qui date de 2018) des processeurs et du coefficient appliqué &lt;a href=&quot;http://www.oracle.com/us/corporate/contracts/processor-core-factor-table-070634.pdf&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
@@ -182,6 +184,12 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
   &lt;li&gt;Soit prendre en compte le nombre de cœur&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;Ce choix est explicité au sein de la documentation ci-dessous :&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-01-21-estimer-ses-couts-de-licences-oracle-c-est-complique/01.png&quot; alt=&quot;Documentation officielle Oracle sur la licence Processeur&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/2019-01-21-estimer-ses-couts-de-licences-oracle-c-est-complique/02.png&quot; alt=&quot;Documentation officielle Oracle sur les conditions liées aux éditions standards&quot; /&gt;&lt;/p&gt;
+
 &lt;p&gt;Dans le cas d’une édition SE, le calcul de licence se base sur le nombre de sockets disponibles. On peut partir du postula qu’un processeur équivaut à un socket.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Warning : C’est donc le nombre de processeur qui sera nécessaire à Oracle pour estimer le coût.&lt;/p&gt;
@@ -190,6 +198,36 @@ Il y a plusieurs règles à garder en tête :&lt;/p&gt;
 &lt;p&gt;Dans le cas d’une édition EE, le calcul de licence se base sur le nombre de cœurs disponibles. Il sera appliqué le &lt;code class=&quot;highlighter-rouge&quot;&gt;Core Factor&lt;/code&gt; à ce nombre de cœurs.&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Warning : C’est donc le nombre de cœurs qui sera nécessaire à Oracle pour estimer le coût.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;224-métrique-n4--durée-de-licence&quot;&gt;2.2.4. Métrique N°4 : Durée de licence&lt;/h3&gt;
+&lt;p&gt;Oracle ne vous précisera peut-être pas ceci en premier lieu. Néanmoins, sachez qu’une licence Oracle n’est pas nécessairement perpétuelle. Si vous ne le précisez pas à la demande, sachez qu’Oracle prendra surement l’hypothèse d’une licence perpétuelle.
+Oracle propose donc 2 types de licences :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;La &lt;code class=&quot;highlighter-rouge&quot;&gt;licence perpétuelle&lt;/code&gt; : comme son nom l’indique, celle-ci ne dispose pas de fin de vie.&lt;/li&gt;
+  &lt;li&gt;La &lt;code class=&quot;highlighter-rouge&quot;&gt;licence à terme&lt;/code&gt; : celle-ci présente un coût inférieur à la licence perpétuelle mais n’est valable que pour un nombre d’année données. Ce type de licence est possible pour des durées de 1 à 5 ans.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Warning : Retour d’Oracle : &lt;code class=&quot;highlighter-rouge&quot;&gt;Le prix affiché pour une licence à terme est basé sur un pourcentage spécifique du prix de la licence perpétuelle. Les licences de durées annuelles sont disponibles de 1 à 5 ans : 1 an - 20% de la liste ; 2 ans - 35% de la liste ; 3 ans - 50% de la liste ; 4 ans 60% de la liste ; 5 ans 70% de la liste.&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Warning : Attention au passage de licence à terme à licence perpétuelle. Oracle ne vous fera pas payer la différence mais vous comptera un coût de licence perpétuelle à 100%.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h1 id=&quot;3-3ème-étape--réception-du-devis&quot;&gt;3. 3ème étape : Réception du devis&lt;/h1&gt;
+&lt;p&gt;Vous avez effectué votre demande de devis, Oracle vous transmet alors une proposition commerciale. Celle-ci précise généralement les informations suivantes :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;1 ligne dédiée au coût de la licence proprement dites : celle-ci y précise l’édition de la base de données (cf. 3.3) et la durée de licence choisie (cf. 3.6).&lt;/li&gt;
+  &lt;li&gt;1 ligne dédiée au coût de support et mise à jour logiciel : celle-ci, dans un cas nominal, est fournie pour une durée d’1 an.
+Dans le cadre de vos appels d’offre, vous souhaitez potentiellement vous projeter sur plusieurs années et donc estimer le coût que cela engendrerait.&lt;/li&gt;
+  &lt;li&gt;Le coût de licence n’est qu’à estimer une seule fois car son coût est valable selon la durée choisie (donc potentiellement de façon perpétuel).&lt;/li&gt;
+  &lt;li&gt;Le coût de support et mise à jour logiciel suit une règle d’estimation au fil des années. Selon des retours d’Oracle, la règle actuelle est la suivante :&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Warning : Retour d’Oracle : &lt;code class=&quot;highlighter-rouge&quot;&gt;Il faut compter 22 % du prix d’achat pour une licence pour la première année mais Oracle applique ensuite un IAR (inflation rate) qui est équivalent à environ 3 ou 4 % d’augmentation par an pour chaque année de support complémentaire.&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt; &lt;/p&gt;
@@ -252,7 +290,7 @@ Ensuite, j’ai aussi besoin que vous ayez quelques connaissances :&lt;/p&gt;
 &lt;p&gt;Je base aussi mes explications sur un environnement Windows.&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
-&lt;h1 id=&quot;1ère-étape--github-pages-pour-héberger&quot;&gt;1ère étape : GitHub Pages pour héberger&lt;/h1&gt;
+&lt;h1 id=&quot;1-1ère-étape--github-pages-pour-héberger&quot;&gt;1. 1ère étape : GitHub Pages pour héberger&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; est un service d’hébergement de site statique. Il présente l’avantage d’être directement connecté à votre repository GitHub. Grâce à ce système, vous pouvez créer des sites Web.&lt;/p&gt;
 
 &lt;p&gt;Deux points sont à conserver en tête lors de sa mise en place :&lt;/p&gt;
@@ -304,9 +342,9 @@ Vous pouvez donc enregistrer ce fichier sous ce chemin.&lt;/p&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;Ça y est, vous avez votre site disponible sur Internet ! Vous pouvez retrouver l’ensemble de ces étapes détaillez &lt;a href=&quot;https://pages.github.com/&quot;&gt;ici&lt;/a&gt;.
-Passons maintenant à l’étape suivante : intégrer un site avec Jekyll.
- &lt;/p&gt;
-&lt;h1 id=&quot;2ème-étape--bloguer-avec-jekyll&quot;&gt;2ème étape : Bloguer avec Jekyll&lt;/h1&gt;
+Passons maintenant à l’étape suivante : intégrer un site avec Jekyll.&lt;/p&gt;
+
+&lt;h1 id=&quot;2-2ème-étape--bloguer-avec-jekyll&quot;&gt;2. 2ème étape : Bloguer avec Jekyll&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; est une façon de créer votre site statique sous le format que j’appellerais « blog ». Grâce à ce système, vous pouvez écrire ainsi vos billets au format Markdown et les intégrer rapidement.&lt;/p&gt;
 
 &lt;p&gt;Pourquoi utiliser Jekyll plutôt qu’autre chose ? J’utilise Jekyll pour plusieurs raisons :&lt;/p&gt;
@@ -349,7 +387,8 @@ Passons maintenant à l’étape suivante : intégrer un site avec Jekyll.
 
 &lt;p&gt;Passons maintenant à l’étape suivante : réaliser son premier site avec Jekyll.
  &lt;/p&gt;
-&lt;h1 id=&quot;3ème-étape--réaliser-son-premier-site-avec-jekyll&quot;&gt;3ème étape : Réaliser son premier site avec Jekyll&lt;/h1&gt;
+
+&lt;h1 id=&quot;3-3ème-étape--réaliser-son-premier-site-avec-jekyll&quot;&gt;3. 3ème étape : Réaliser son premier site avec Jekyll&lt;/h1&gt;
 &lt;p&gt;Maintenant que Jekyll est installé, nous allons créer notre premier site en quelques commandes. Je ne vais donc pas être exhaustif et parcourir volontairement les grandes lignes. Le reste pourra être étudié plus en profondeur au sein de &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;la documentation officielle&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;J’ai décidé volontairement de ne pas créer le site directement au sein de la copie locale de mon repository GitHub. Je réalise donc ensuite des copies locales lorsque j’obtiens une version que je juge satisfaisante de mon site.
@@ -384,7 +423,7 @@ cd C:\Developpement&lt;/li&gt;
 &lt;p&gt;Passons maintenant à l’étape suivante : configurer son site Jekyll.&lt;/p&gt;
 
 &lt;p&gt; &lt;/p&gt;
-&lt;h1 id=&quot;4ème-étape--le-ba-ba-pour-configurer-son-site-jekyll&quot;&gt;4ème étape : Le b.a.-ba pour configurer son site Jekyll&lt;/h1&gt;
+&lt;h1 id=&quot;4-4ème-étape--le-ba-ba-pour-configurer-son-site-jekyll&quot;&gt;4. 4ème étape : Le b.a.-ba pour configurer son site Jekyll&lt;/h1&gt;
 &lt;p&gt;Vous disposez désormais d’un site Jekyll et vous voulez donc le configurer et le customiser. Je vais vous donner ici quelques pistes pour le faire. Je découperais mon explication en 3 thématiques :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Comment configurer votre site ?&lt;/li&gt;
@@ -394,7 +433,7 @@ cd C:\Developpement&lt;/li&gt;
 
 &lt;p&gt;Vous trouverez plus d’information sur &lt;a href=&quot;https://jekyllrb.com/docs/&quot;&gt;la documentation officielle&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;comment-configurer-votre-site-&quot;&gt;Comment configurer votre site ?&lt;/h2&gt;
+&lt;h2 id=&quot;41-comment-configurer-votre-site-&quot;&gt;4.1. Comment configurer votre site ?&lt;/h2&gt;
 &lt;p&gt;A la racine de votre site, vous trouverez un fichier &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. Vous pouvez librement y éditer, entre autres :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Le titre de votre site via la balise &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt;&lt;/li&gt;
@@ -411,7 +450,7 @@ cd C:\Developpement&lt;/li&gt;
 
 &lt;p&gt;Vous pouvez accéder à la documentation sur la syntaxe et le principe des pages Jekyll &lt;a href=&quot;https://jekyllrb.com/docs/pages/&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;comment-ajouter-des-posts-&quot;&gt;Comment ajouter des posts ?&lt;/h2&gt;
+&lt;h2 id=&quot;42-comment-ajouter-des-posts-&quot;&gt;4.2. Comment ajouter des posts ?&lt;/h2&gt;
 &lt;p&gt;Comment vous pouvez le voir à l’initialisation de votre site, celui-ci dispose d’un post s’intitulant &lt;code class=&quot;highlighter-rouge&quot;&gt;Welcome to Jekyll&lt;/code&gt;. Celui-ci se situe dans le répertoire &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; et se trouve dans le fichier &lt;code class=&quot;highlighter-rouge&quot;&gt;AAAA-MM-dd-welcome-to-jekyll.markdown&lt;/code&gt;. Il se compose, entre autres, des éléments suivants :&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Un titre de post via la balise &lt;code class=&quot;highlighter-rouge&quot;&gt;title&lt;/code&gt;&lt;/li&gt;
@@ -427,7 +466,7 @@ cd C:\Developpement&lt;/li&gt;
 
 &lt;p&gt;Vous pouvez accéder à la documentation sur la syntaxe et le principe des posts Jekyll &lt;a href=&quot;https://jekyllrb.com/docs/posts/&quot;&gt;ici&lt;/a&gt;.&lt;/p&gt;
 
-&lt;h2 id=&quot;déployer-son-site&quot;&gt;Déployer son site&lt;/h2&gt;
+&lt;h2 id=&quot;43-déployer-son-site&quot;&gt;4.3. Déployer son site&lt;/h2&gt;
 &lt;p&gt;Après avoir réalisé des modifications, il vous est nécessaire de regénérer votre site Jekyll. La gestion de votre site Jekyll passe par quelques lignes de commande (mais rien de très sorcier).
 Deux commandes sont à retenir :&lt;/p&gt;
 
@@ -441,6 +480,7 @@ Deux commandes sont à retenir :&lt;/p&gt;
 
 &lt;p&gt;Le reste pourra être étudié plus en profondeur au sein du &lt;a href=&quot;https://jekyllrb.com/docs/usage/&quot;&gt;référentiel des commandes utiles&lt;/a&gt;
  &lt;/p&gt;
+
 &lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
 &lt;p&gt;Vous avez appris grâce à ce billet à configurer votre environnement GitHub Pages, y créer un site grâce à Jekyll et découvert les quelques notions de base pour le configurer.&lt;/p&gt;
 

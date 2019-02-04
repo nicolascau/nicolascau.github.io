@@ -77,7 +77,7 @@
 <p>Je ne m’attarde pas non plus sur la partie dimensionnement de votre machine contenant Oracle. Je pars donc du principe que vous savez quoi demander en terme matériel.</p>
 
 <p> </p>
-<h1 id="1ère-étape--les-différentes-approches-de-coût">1ère étape : Les différentes approches de coût</h1>
+<h1 id="1-1ère-étape--les-différentes-approches-de-coût">1. 1ère étape : Les différentes approches de coût</h1>
 <p>Une licence Oracle peut s’estimer selon deux approches :</p>
 <ul>
   <li><code class="highlighter-rouge">Named User Plus</code> : via le nombre d’utilisateurs</li>
@@ -86,7 +86,7 @@
 
 <p>Vous trouverez ci-dessous un détail vulgarisé de ces deux approches.</p>
 
-<h2 id="lapproche-named-user-plus-nup">L’approche Named User Plus (NUP)</h2>
+<h2 id="11-lapproche-named-user-plus-nup">1.1. L’approche Named User Plus (NUP)</h2>
 <p>La métrique <code class="highlighter-rouge">Named User Plus</code> vous permet d’identifier le coût en licence dans une approche de nombre d’utilisateurs.</p>
 
 <p>Je ne vais pas m’étendre trop sur cette approche puisque je ne l’ai pas mise à l‘épreuve. Cela étant, il faut savoir qu’elle implique de connaître :</p>
@@ -101,7 +101,7 @@
 
 <p>Dans les gros systèmes, ce nombre de NUP peut monter très rapidement. Il est préférable de réserver cette approche à un nombre limité d’utilisateur. Je vous conseille de vous méfier de cette approche si vous souhaitez utiliser votre plateforme pour réaliser des tests de performance également.</p>
 
-<h2 id="lapproche-processor">L’approche Processor</h2>
+<h2 id="12-lapproche-processor">1.2. L’approche Processor</h2>
 <p>La métrique <code class="highlighter-rouge">Processor</code> vous permet d’identifier le coût en licence dans une approche nombre de processeurs. Dans ce cas de figure, il n’y a donc pas de limite au nombre d’utilisateur.
 Il y a plusieurs règles à garder en tête :</p>
 <ul>
@@ -129,15 +129,15 @@ Il y a plusieurs règles à garder en tête :</p>
 
 <p>Passons maintenant à l’étape suivante : demander un devis à Oracle.</p>
 
-<h1 id="2ème-étape--demander-un-devis">2ème étape : Demander un devis</h1>
+<h1 id="2-2ème-étape--demander-un-devis">2. 2ème étape : Demander un devis</h1>
 <p>Maintenant que nous connaissons les quelques leviers généraux, nous pouvons effectuer une demande de devis à Oracle.</p>
 
-<h2 id="les-règles-à-savoir-pour-contacter-oracle">Les règles à savoir pour contacter Oracle</h2>
+<h2 id="21-les-règles-à-savoir-pour-contacter-oracle">2.1. Les règles à savoir pour contacter Oracle</h2>
 <p>Lorsque vous contactez Oracle, sachez qu’ils répartissent leur prestation selon le client à adresser. En fonction du client final (ce n’est parfois pas vous-même mais l’entreprise pour laquelle vous réalisez le projet), Oracle vous mettra en contact avec un commercial ou un autre. Il faut donc bien savoir quelle est l’entreprise cliente destinée à disposer de la base de données Oracle.</p>
 
 <p>Ensuite, n’hésitez pas à exposer votre cas d’utilisation à Oracle. Vous pourrez ainsi vous appuyer sur leurs conseils pour adapter votre solution technique. Ne partez pas du principe que vous savez précisément ce que vous voulez. Prenez plutôt l’explication des mécanismes de licence Oracle comme un bonus d’explication afin de pouvoir demander des justifications de coût à Oracle dans son devis.</p>
 
-<h2 id="les-métriques-nécessaires-à-oracle">Les métriques nécessaires à Oracle</h2>
+<h2 id="22-les-métriques-nécessaires-à-oracle">2.2. Les métriques nécessaires à Oracle</h2>
 <p>Pour effectuer un devis, Oracle vous demandera les données suivantes :</p>
 <ul>
   <li>Si vous effectuez une approche NUP ou Processor :
@@ -147,6 +147,7 @@ Il y a plusieurs règles à garder en tête :</p>
           <li>Edition de la base de données</li>
           <li>Options supplémentaires souhaitées</li>
           <li>Nombre d’utilisateurs global (cf. explication dans la 1ère étape)</li>
+          <li>Durée de licence</li>
         </ul>
       </li>
       <li>Dans le cas Processor
@@ -154,6 +155,7 @@ Il y a plusieurs règles à garder en tête :</p>
           <li>Edition de la base de données</li>
           <li>Options supplémentaires souhaitées</li>
           <li>Typologie du serveur : modèle de processeur et nombre de cœur physique</li>
+          <li>Durée de licence</li>
         </ul>
       </li>
     </ul>
@@ -162,7 +164,7 @@ Il y a plusieurs règles à garder en tête :</p>
 
 <p>Je détaillerais par la suite le cas « Processor » uniquement.</p>
 
-<h2 id="métrique-n1--edition-de-la-base-de-données">Métrique N°1 : Edition de la base de données</h2>
+<h3 id="221-métrique-n1--edition-de-la-base-de-données">2.2.1. Métrique N°1 : Edition de la base de données</h3>
 <p>Plusieurs éditions de base de données Oracle sont disponibles et diffèrent fortement vis-à-vis des fonctionnalités, tarifs et limitations engendrées.</p>
 
 <p>Je vous citerais ici les 4 versions les plus courantes (il en existe d’autres) :</p>
@@ -201,7 +203,7 @@ Il y a plusieurs règles à garder en tête :</p>
   <li>Les limitations de la version SE2 sont-elles compatibles avec l’utilisation que je prévoie de ma base de données ?</li>
 </ul>
 
-<h2 id="métrique-n2--options-supplémentaires-souhaitées">Métrique N°2 : Options supplémentaires souhaitées</h2>
+<h3 id="222-métrique-n2--options-supplémentaires-souhaitées">2.2.2. Métrique N°2 : Options supplémentaires souhaitées</h3>
 <p>Je ne vais pas être très verbeux sur le sujet. La documentation Oracle vous en dira davantage.</p>
 <ul>
   <li>Sachez que chaque édition d’Oracle permet de disposer d’une option de manière plus ou moins complète. Ce référencement est disponible <a href="https://docs.oracle.com/en/database/oracle/oracle-database/18/dblic/Licensing-Information.html#GUID-0F9EB85D-4610-4EDF-89C2-4916A0E7AC87">ici</a>.</li>
@@ -217,7 +219,7 @@ Il y a plusieurs règles à garder en tête :</p>
 
 <p>Il est donc intéressant d’appliquer cette vérification car toute activation d’une fonctionnalité non prévue dans l’édition que vous avez causera une requalification automatique en EE (et donc Oracle sera en mesure de vous demander un réalignement financier).</p>
 
-<h2 id="métrique-n3--typologie-du-serveur">Métrique N°3 : Typologie du serveur</h2>
+<h3 id="223-métrique-n3--typologie-du-serveur">2.2.3. Métrique N°3 : Typologie du serveur</h3>
 <p>Dans une approche <code class="highlighter-rouge">Processor</code>, Oracle part du principe que l’utilisation de son produit Oracle diffèrera d’un serveur à un autre en fonction de sa puissance. Un coefficient est donc appliqué selon le serveur choisit pour héberger votre Oracle : <code class="highlighter-rouge">le Core Factor</code>. Ceci signifie qu’il vous faut préciser le modèle de processeur que vous souhaitez utiliser.</p>
 <blockquote>
   <p>Warning : Vous pouvez retrouver une liste (qui date de 2018) des processeurs et du coefficient appliqué <a href="http://www.oracle.com/us/corporate/contracts/processor-core-factor-table-070634.pdf">ici</a>.</p>
@@ -229,6 +231,12 @@ Il y a plusieurs règles à garder en tête :</p>
   <li>Soit prendre en compte le nombre de cœur</li>
 </ul>
 
+<p>Ce choix est explicité au sein de la documentation ci-dessous :</p>
+
+<p><img src="/assets/2019-01-21-estimer-ses-couts-de-licences-oracle-c-est-complique/01.png" alt="Documentation officielle Oracle sur la licence Processeur" /></p>
+
+<p><img src="/assets/2019-01-21-estimer-ses-couts-de-licences-oracle-c-est-complique/02.png" alt="Documentation officielle Oracle sur les conditions liées aux éditions standards" /></p>
+
 <p>Dans le cas d’une édition SE, le calcul de licence se base sur le nombre de sockets disponibles. On peut partir du postula qu’un processeur équivaut à un socket.</p>
 <blockquote>
   <p>Warning : C’est donc le nombre de processeur qui sera nécessaire à Oracle pour estimer le coût.</p>
@@ -237,6 +245,36 @@ Il y a plusieurs règles à garder en tête :</p>
 <p>Dans le cas d’une édition EE, le calcul de licence se base sur le nombre de cœurs disponibles. Il sera appliqué le <code class="highlighter-rouge">Core Factor</code> à ce nombre de cœurs.</p>
 <blockquote>
   <p>Warning : C’est donc le nombre de cœurs qui sera nécessaire à Oracle pour estimer le coût.</p>
+</blockquote>
+
+<h3 id="224-métrique-n4--durée-de-licence">2.2.4. Métrique N°4 : Durée de licence</h3>
+<p>Oracle ne vous précisera peut-être pas ceci en premier lieu. Néanmoins, sachez qu’une licence Oracle n’est pas nécessairement perpétuelle. Si vous ne le précisez pas à la demande, sachez qu’Oracle prendra surement l’hypothèse d’une licence perpétuelle.
+Oracle propose donc 2 types de licences :</p>
+<ul>
+  <li>La <code class="highlighter-rouge">licence perpétuelle</code> : comme son nom l’indique, celle-ci ne dispose pas de fin de vie.</li>
+  <li>La <code class="highlighter-rouge">licence à terme</code> : celle-ci présente un coût inférieur à la licence perpétuelle mais n’est valable que pour un nombre d’année données. Ce type de licence est possible pour des durées de 1 à 5 ans.</li>
+</ul>
+
+<blockquote>
+  <p>Warning : Retour d’Oracle : <code class="highlighter-rouge">Le prix affiché pour une licence à terme est basé sur un pourcentage spécifique du prix de la licence perpétuelle. Les licences de durées annuelles sont disponibles de 1 à 5 ans : 1 an - 20% de la liste ; 2 ans - 35% de la liste ; 3 ans - 50% de la liste ; 4 ans 60% de la liste ; 5 ans 70% de la liste.</code></p>
+</blockquote>
+
+<blockquote>
+  <p>Warning : Attention au passage de licence à terme à licence perpétuelle. Oracle ne vous fera pas payer la différence mais vous comptera un coût de licence perpétuelle à 100%.</p>
+</blockquote>
+
+<h1 id="3-3ème-étape--réception-du-devis">3. 3ème étape : Réception du devis</h1>
+<p>Vous avez effectué votre demande de devis, Oracle vous transmet alors une proposition commerciale. Celle-ci précise généralement les informations suivantes :</p>
+<ul>
+  <li>1 ligne dédiée au coût de la licence proprement dites : celle-ci y précise l’édition de la base de données (cf. 3.3) et la durée de licence choisie (cf. 3.6).</li>
+  <li>1 ligne dédiée au coût de support et mise à jour logiciel : celle-ci, dans un cas nominal, est fournie pour une durée d’1 an.
+Dans le cadre de vos appels d’offre, vous souhaitez potentiellement vous projeter sur plusieurs années et donc estimer le coût que cela engendrerait.</li>
+  <li>Le coût de licence n’est qu’à estimer une seule fois car son coût est valable selon la durée choisie (donc potentiellement de façon perpétuel).</li>
+  <li>Le coût de support et mise à jour logiciel suit une règle d’estimation au fil des années. Selon des retours d’Oracle, la règle actuelle est la suivante :</li>
+</ul>
+
+<blockquote>
+  <p>Warning : Retour d’Oracle : <code class="highlighter-rouge">Il faut compter 22 % du prix d’achat pour une licence pour la première année mais Oracle applique ensuite un IAR (inflation rate) qui est équivalent à environ 3 ou 4 % d’augmentation par an pour chaque année de support complémentaire.</code></p>
 </blockquote>
 
 <p> </p>
