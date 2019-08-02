@@ -1,1 +1,10 @@
 *Tags : `{{ page.tags | join: ', ' }}`* et *Catégories : `{{ page.categories | join: ', ' }}`*
+
+<div class="post_header">
+    {{ page.description }}
+
+    <ul>{% for question in page.description_questions %}
+        <li>{{ question }}</li>
+    {% endfor %}
+    </ul>
+</div>

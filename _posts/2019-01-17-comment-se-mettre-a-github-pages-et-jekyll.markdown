@@ -4,17 +4,12 @@ title:  "Comment se mettre à GitHub Pages et Jekyll ?"
 date:   2019-01-17 14:00:00 +0100
 categories: [Configuration]
 tags: [GitHub Pages, Jekyll]
+description: "Si comme moi, vous avez envie de monter votre blog sans vous compliquer la vie, ce mini-tutoriel est pour vous. Il vous présentera en quelques actions comment mettre en place un blog en s’appuyant sur du déjà tout prêt. A savoir :"
+description_questions: ["GitHub pour l’hébergement des sources", "GitHub Pages pour l’accessibilité du site Web", "Jekyll pour la mise en place d’un blog structuré en quelques clics"]
 ---
 {% include post_header.html %}
 
-# Résumé
-Si comme moi, vous avez envie de monter votre blog sans vous compliquer la vie, ce mini-tutoriel est pour vous. Il vous présentera en quelques actions comment mettre en place un blog en s’appuyant sur du déjà tout prêt. A savoir :
-* GitHub pour l’hébergement des sources
-* GitHub Pages pour l’accessibilité du site Web
-* Jekyll pour la mise en place d’un blog structuré en quelques clics
-
 A vos claviers !
-
 
 # Introduction
 Depuis quelques semaines, j’ai eu envie de me mettre en place un blog. Non pas que j’ai envie de vous raconter ma vie. Néanmoins, je me dis que c’est une façon de capitaliser mes connaissances d’informaticien. Je serais donc mon premier lecteur (c’est déjà ça 😉) !

@@ -4,16 +4,12 @@ title:  "Estimer ses coûts de licence(s) Oracle, c’est compliqué !"
 date:   2019-01-21 14:00:00 +0100
 categories: [Chiffrage]
 tags: [Oracle, Licence]
+description: "Récemment, j’ai dû m’attaquer à l’exercice de chiffrer le coût en licence d’une base de données Oracle. J’ai remarqué que l’exercice était loin d’être aisé. Je me dis donc qu’un billet pourrait permettre d’y voir un peu plus clair pour tout le monde :"
+description_questions: ["Quel est le mécanisme d’estimation des coûts en licence dans le cadre Oracle ?", "Quelles sont les données minimales nécessaires à l’estimation d’un coût de licence ?"]
 ---
 {% include post_header.html %}
 
-# Résumé
-Récemment, j’ai dû m’attaquer à l’exercice de chiffrer le coût en licence d’une base de données Oracle. J’ai remarqué que l’exercice était loin d’être aisé. Je me dis donc qu’un billet pourrait permettre d’y voir un peu plus clair pour tout le monde :
-* Quel est le mécanisme d’estimation des coûts en licence dans le cadre Oracle ?
-* Quelles sont les données minimales nécessaires à l’estimation d’un coût de licence ?
-
 Bonne lecture !
-
 
 # Introduction
 Tout d’abord, je préfère ne pas vous promettre monts et merveilles. A la fin de cet article, vous ne saurez pas parfaitement estimer le coût en licence. Vous allez me répondre : Mais alors, il ne sert à rien ton article !
